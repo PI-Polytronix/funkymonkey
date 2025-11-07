@@ -60,7 +60,7 @@ p { max-width: 85ch; }
 .block.dark .btn, .block.cobalt .btn, .block.electric .btn { border-color: #fff; color: #fff; }
 .btn.yellow { border-color: var(--amber); color: #000; background: var(--amber); }
 
-.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.grid-3 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 @media (max-width: 960px) { .grid-3 { grid-template-columns: 1fr; } .grid-2 { grid-template-columns: 1fr; } }
 
@@ -150,7 +150,7 @@ a:focus { outline: 2px solid #3459d0; outline-offset: 2px; }
 .card { background: #fff; border: 1px solid var(--n-100, #DCE3EC); border-radius: 10px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
 .card h3 { margin-top: 0; }
 .grid { display: grid; gap: 24px; }
-.grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid.cols-3 { grid-template-columns: repeat(4, 1fr); }
 .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
 @media (max-width: 900px) { .grid.cols-3 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .grid.cols-3, .grid.cols-2 { grid-template-columns: 1fr; } }

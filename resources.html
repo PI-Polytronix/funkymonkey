@@ -5,7 +5,15 @@
 <title>Resources | Polytronix</title>
 <meta content="Resources hub for case studies, datasheets, white papers, and compliance." name="description"/>
 <link href="assets/css/site.css" rel="stylesheet"/>
-</head>
+<style>
+.breadcrumbs{font-size:.875rem;margin:12px 0 24px}
+.breadcrumbs ol{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px}
+.breadcrumbs li{display:inline}
+.breadcrumbs li+li::before{content:"›";margin:0 6px;opacity:.6}
+.breadcrumbs a{text-decoration:none}
+.breadcrumbs a:hover{text-decoration:underline}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "/index.html"}, {"@type": "ListItem", "position": 2, "name": "Resources", "item": "/resources.html"}]}</script></head>
 <body>
 <header class="site-header">
 <div class="container header-inner">
@@ -15,7 +23,6 @@
 <span></span><span></span><span></span>
 </label>
 <nav class="site-nav">
-
 <a href="industries.html">Industries</a>
 <a href="capabilities.html">Capabilities</a>
 <a href="resources.html">Resources</a>
@@ -24,7 +31,7 @@
 </nav>
 </div>
 </header>
-<main class="container"><section class="hero booth"><div class="container"><h1>Resources</h1><p>Technical downloads, brochures, and certifications.</p><a class="btn rfq" href="contact.html">Request a Quote</a></div></section>
+<main class="container"><nav aria-label="Breadcrumb" class="breadcrumbs"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Resources</li></ol></nav><section class="hero booth"><div class="container"><h1>Resources</h1><p>Technical downloads, brochures, and certifications.</p><a class="btn rfq" href="contact.html">Request a Quote</a></div></section>
 <div class="container"><section><h2>Case Studies</h2><p><a href="case-studies.html">View Case Studies</a></p></section><section><h2>Datasheets Library</h2><p><a href="datasheets.html">View Datasheets</a></p></section><section><h2>White Papers &amp; Guides</h2><p><a href="white-papers.html">View White Papers</a></p></section><section><h2>Compliance &amp; Standards</h2><p><a href="compliance.html">View Compliance Info</a></p></section><section><h2>Certifications</h2><p><a href="certifications.html">View Certifications</a></p></section><p><a href="contact.html">Request a quote</a></p></div></main>
 <footer><p>© Polytronix</p></footer>
 </body></html>
