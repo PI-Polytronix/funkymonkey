@@ -284,3 +284,51 @@ footer { border-top: 1px solid var(--n-100, #DCE3EC); padding: 16px; color: #5C6
   opacity:.55;
   mix-blend-mode: normal;
 }
+
+
+/* CARD GRID STYLES ADDED */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #ffffff;
+  height: 100%;
+}
+
+.card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.card-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 0.75rem 1rem 1rem;
+}
+
+.card.small .card-body {
+  padding: 0.5rem 0.75rem 0.75rem;
+}
+
+.segment-cards h2,
+.sub-industry-cards h2 {
+  margin-bottom: 0.5rem;
+}
+
+.segment-cards p,
+.sub-industry-cards p {
+  margin-bottom: 0.75rem;
+}
