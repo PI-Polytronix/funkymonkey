@@ -1,0 +1,55 @@
+# Polytronix Website Redirects
+# Format: /old-path /new-path [status-code]
+
+# Industry pages
+/aerospace-defense.html /industries/aerospace-defense 301
+/industrials.html /industries/industrials 301
+/commercial-aviation.html /industries/aerospace-defense/commercial-aviation 301
+/business-general-aviation.html /industries/aerospace-defense/business-general-aviation 301
+/military-programs.html /industries/aerospace-defense/military-programs 301
+/helicopters.html /industries/aerospace-defense/helicopters 301
+/simulation-training.html /industries/aerospace-defense/simulation-training 301
+/maritime.html /industries/aerospace-defense/maritime-marine 301
+/transportation-automotive.html /industries/industrials/transportation-automotive 301
+/rail-transit.html /industries/industrials/rail-transit 301
+/oil-gas.html /industries/industrials/oil-gas 301
+/medical.html /industries/industrials/medical-life-sciences 301
+/communications.html /industries/industrials/communications-networking 301
+/energy-utilities.html /industries/industrials/energy-utilities 301
+/industrial-equipment.html /industries/industrials/industrial-equipment 301
+
+# Capability pages
+/displays.html /capabilities/displays 301
+/optical-bonding.html /capabilities/optical-bonding 301
+/electro-mechanical.html /capabilities/electro-mechanical-assemblies 301
+/cable-assemblies.html /capabilities/cable-wire-harnesses 301
+/box-builds.html /capabilities/box-builds 301
+/nvis.html /capabilities/nvis-solutions 301
+/ruggedization.html /capabilities/ruggedization 301
+/touch-integration.html /capabilities/touch-integration 301
+/pcb-assembly.html /capabilities/pcb-assembly 301
+/machining.html /capabilities/machining 301
+/harness-design.html /capabilities/harness-design 301
+/instrument-lighting.html /capabilities/instrument-lighting 301
+/instrument-panels.html /capabilities/instrument-panels 301
+/custom-engineering.html /capabilities/custom-engineering 301
+/repair.html /capabilities/repair-station 301
+/repair-station.html /capabilities/repair-station 301
+
+# Overview pages
+/capabilities.html /capabilities/ 301
+/industries.html /industries/ 301
+
+# Other pages
+/certifications.html /quality-compliance/certifications 301
+/compliance.html /quality-compliance/compliance-statements 301
+/about.html /about 301
+/contact.html /contact 301
+/case-studies.html /resources/case-studies 301
+/datasheets.html /resources/datasheets 301
+/white-papers.html /resources/white-papers 301
+
+# Trailing slash normalization
+/industries /industries/ 301
+/capabilities /capabilities/ 301
+/resources /resources/ 301

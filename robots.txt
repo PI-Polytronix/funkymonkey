@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /zzz_test.html
-
-Sitemap: https://polytronix.com/sitemap.xml
