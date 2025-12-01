@@ -632,12 +632,29 @@ p {
   pointer-events: none;
 }
 
-/* Gradient overlay to blend the banner image with the left side */
+/* Striped overlay to blend the banner image with the left side (bars style) */
 .hero-banner-image::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, var(--ptx-blue-500) 0%, rgba(25, 54, 115, 0.6) 50%, transparent 100%);
+  background: 
+    linear-gradient(to right,
+      var(--ptx-blue-500) 0%,
+      var(--ptx-blue-500) 5%,
+      rgba(25, 54, 115, 0.85) 5%,
+      rgba(25, 54, 115, 0.85) 12%,
+      rgba(25, 54, 115, 0.7) 12%,
+      rgba(25, 54, 115, 0.7) 20%,
+      rgba(25, 54, 115, 0.55) 20%,
+      rgba(25, 54, 115, 0.55) 30%,
+      rgba(25, 54, 115, 0.4) 30%,
+      rgba(25, 54, 115, 0.4) 42%,
+      rgba(25, 54, 115, 0.25) 42%,
+      rgba(25, 54, 115, 0.25) 56%,
+      rgba(25, 54, 115, 0.1) 56%,
+      rgba(25, 54, 115, 0.1) 72%,
+      transparent 72%
+    );
 }
 
 /* Responsive: On tablets, make banner narrower */
