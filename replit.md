@@ -19,8 +19,8 @@ This is a static HTML website for Polytronix, Inc., a company specializing in ru
 ├── css/
 │   └── styles.css         # Main stylesheet (Design System 2.0)
 ├── assets/
-│   ├── images/            # Logo and graphics (SVG placeholders)
-│   └── favicons/          # Favicon files (SVG placeholders)
+│   ├── images/            # Logo, banners, and graphics
+│   └── favicons/          # Favicon files
 ├── server.py              # Python HTTP server for development
 ├── _redirects             # URL redirect rules (Netlify format)
 └── CNAME                  # Custom domain configuration
@@ -50,18 +50,89 @@ The server includes:
 ### Workflow
 The "Start application" workflow automatically runs the server when the Replit environment starts.
 
-## Missing Assets
+## Required Images
 
-⚠️ **Important**: The original GitHub repository did not include the `/assets/` directory with images. SVG placeholder files have been created for:
-- Company logo (`logo.svg`)
-- Favicon files
-- Pattern backgrounds
+### Essential (All Pages)
+| Filename | Location | Size |
+|----------|----------|------|
+| `logo.png` | Header & Footer on all pages | ~200x50 px |
+| `favicon-32.png` | Browser tab | 32x32 px |
+| `favicon-16.png` | Browser tab | 16x16 px |
+| `apple-touch-icon.png` | iOS bookmark | 180x180 px |
 
-To add real assets:
-1. Upload actual image files to `/assets/images/` and `/assets/favicons/`
-2. The HTML files reference `.png` files, but the server will serve whatever files are present
+### Homepage (index.html)
+| Filename | Section | Notes |
+|----------|---------|-------|
+| `index_banner.png` | Hero (right side) | Replaces gray pattern area, blends with blue gradient |
+| `index_industries.png` | "Industries We Serve" background | 70% transparency overlay applied |
 
-See `/assets/README.md` for more details.
+### Industry Pages
+| Filename | Page |
+|----------|------|
+| `industries_banner.png` | industries.html (overview) |
+| `aerospace_banner.png` | aerospace-defense.html |
+| `industrials_banner.png` | industrials.html |
+| `commercial_banner.png` | commercial-aviation.html |
+| `business_banner.png` | business-aviation.html |
+| `military_banner.png` | military-programs.html |
+| `helicopters_banner.png` | helicopters.html |
+| `simulation_banner.png` | simulation-training.html |
+| `maritime_banner.png` | maritime-marine.html |
+| `rail_banner.png` | rail-transit.html |
+| `oil_banner.png` | oil-gas.html |
+| `medical_banner.png` | medical-life-sciences.html |
+| `communications_banner.png` | communications-networking.html |
+| `energy_banner.png` | energy-utilities.html |
+| `industrial_banner.png` | industrial-equipment.html |
+| `transportation_banner.png` | transportation-automotive.html |
+
+### Capability Pages
+| Filename | Page |
+|----------|------|
+| `capabilities_banner.png` | capabilities.html (overview) |
+| `displays_banner.png` | displays.html |
+| `optical_banner.png` | optical-bonding.html |
+| `electro_banner.png` | electro-mechanical-assemblies.html |
+| `cable_banner.png` | cable-wire-harnesses.html |
+| `box_banner.png` | box-builds.html |
+| `nvis_banner.png` | nvis-solutions.html |
+| `ruggedization_banner.png` | ruggedization.html |
+| `touch_banner.png` | touch-integration.html |
+| `pcb_banner.png` | pcb-assembly.html |
+| `machining_banner.png` | machining.html |
+| `harness_banner.png` | harness-design.html |
+| `lighting_banner.png` | instrument-lighting.html |
+| `panels_banner.png` | instrument-panels.html |
+| `engineering_banner.png` | custom-engineering.html |
+| `repair_banner.png` | repair-station.html |
+
+### Other Pages
+| Filename | Page |
+|----------|------|
+| `about_banner.png` | about.html |
+| `certifications_banner.png` | certifications.html |
+| `contact_banner.png` | contact.html |
+
+### Recommended Image Sizes
+- **Banner/Hero images**: 1920 x 800 pixels (wide landscape)
+- **Favicon**: 32x32 and 16x16 pixels (square)
+- **Logo**: Around 200 x 50 pixels
+
+### Image Placement
+All images go in `/assets/images/` except favicons which go in `/assets/favicons/`
+
+## CSS Features for Images
+
+### Hero Banner Images
+- CSS class: `.hero-with-banner`
+- The banner image appears on the right side of the hero
+- Blue gradient overlay blends the image with the left content area
+- Images are automatically sized/cropped with `background-size: cover`
+
+### Section Background Images
+- CSS class: `.section-with-bg`
+- 70% white transparency overlay applied automatically
+- Images are centered and cover the full section
 
 ## Design System
 
@@ -101,28 +172,19 @@ Note: These redirects use Netlify format and may need adaptation for Replit depl
 - **About** (`about.html`)
 - **Contact** (`contact.html`)
 
-### Industry Pages
-- Aerospace & Defense
-- Commercial Aviation
-- Business Aviation
-- Military Programs
-- Helicopters
-- Simulation & Training
-- Maritime & Marine
-- And more...
+### Industry Pages (15 pages)
+- Aerospace & Defense, Industrials
+- Commercial Aviation, Business Aviation, Military Programs
+- Helicopters, Simulation & Training, Maritime & Marine
+- Rail & Transit, Oil & Gas, Medical & Life Sciences
+- Communications & Networking, Energy & Utilities
+- Industrial Equipment, Transportation & Automotive
 
-### Capability Pages
-- Displays
-- Optical Bonding
-- Electro-Mechanical Assemblies
-- Cable & Wire Harnesses
-- Box Builds
-- NVIS Solutions
-- Ruggedization
-- Touch Integration
-- PCB Assembly
-- Machining
-- And more...
+### Capability Pages (15 pages)
+- Displays, Optical Bonding, NVIS Solutions, Ruggedization, Touch Integration
+- Electro-Mechanical Assemblies, Box Builds, Instrument Panels, Instrument Lighting
+- Cable & Wire Harnesses, Harness Design
+- PCB Assembly, Machining, Custom Engineering, Repair Station
 
 ## Recent Changes
 
@@ -133,20 +195,24 @@ Note: These redirects use Netlify format and may need adaptation for Replit depl
 - Configured static site deployment
 - Added .gitignore for Python
 - Set up workflow for automatic server startup
+- Added CSS support for hero banner images with gradient overlay
+- Added CSS support for section background images with 70% transparency
+- Updated all 40+ HTML pages with banner image references
 
 ## User Preferences
 - Keep the existing HTML structure and CSS design system
 - Maintain static site approach (no build tools)
 - Preserve all existing page content and navigation
+- Hero sections keep blue gradient, images appear on right side
+- Section backgrounds use 70% transparency overlay
 
 ## Known Issues
-- Missing actual image assets (using SVG placeholders)
-- Redirect rules are in Netlify format (may need adjustment for Replit)
 - CNAME points to `preview.boardactivism.com` (should be updated for production)
+- Redirect rules are in Netlify format (may need adjustment for Replit)
 
 ## Next Steps
-1. Upload actual logo and image files to replace SVG placeholders
-2. Update CNAME file with correct domain
-3. Review and test all navigation links
+1. Add actual banner images to `/assets/images/` (see Required Images section)
+2. Add logo.png and favicon files
+3. Update CNAME file with correct domain
 4. Verify contact form functionality
 5. Test redirects in production environment

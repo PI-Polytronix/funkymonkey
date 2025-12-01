@@ -603,6 +603,89 @@ p {
 }
 
 /* ==========================================================================
+   6b. HERO WITH CUSTOM BANNER IMAGES
+   ========================================================================== */
+
+/* Hero with custom banner image (replaces the circuit pattern on the right) */
+.hero-with-banner {
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+/* Adjust the ::after pseudo-element to not show circuit pattern when banner is present */
+.hero-with-banner::after {
+  background: none;
+}
+
+/* Hero banner image container for the right side (alternative approach) */
+.hero-banner-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* Gradient overlay to blend the banner image with the left side */
+.hero-banner-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--ptx-blue-500) 0%, rgba(25, 54, 115, 0.6) 50%, transparent 100%);
+}
+
+/* Responsive: On tablets, make banner narrower */
+@media (max-width: 1023px) {
+  .hero-banner-image {
+    width: 40%;
+    opacity: 0.7;
+  }
+}
+
+/* Responsive: On mobile, hide the banner image to keep text readable */
+@media (max-width: 767px) {
+  .hero-banner-image {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   6c. SECTION BACKGROUNDS WITH IMAGE OVERLAYS
+   ========================================================================== */
+
+/* Section with background image and 70% transparency overlay */
+.section-with-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section-with-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(230, 235, 235, 0.7); /* 70% white overlay for light sections */
+  z-index: 0;
+}
+
+.section-with-bg > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Dark section with background image and overlay */
+.section-navy.section-with-bg::before {
+  background: rgba(34, 54, 81, 0.85); /* 85% navy overlay for dark sections */
+}
+
+/* ==========================================================================
    7. CARDS
    ========================================================================== */
 
