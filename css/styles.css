@@ -687,31 +687,36 @@ p {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 55%;
-  background-color: var(--ptx-blue-500);
-  background-size: 100% 100%;
+  width: 50%;
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   z-index: 2;
+  opacity: 0.85;
   pointer-events: none;
 }
 
-/* Striped overlay: transparent, solid, transparent, almost invisible */
+/* Striped overlay to blend the banner image with the left side (bars style) */
 .hero-banner-image::before {
   content: "";
   position: absolute;
   inset: 0;
   background:
     linear-gradient(to right,
-      transparent 0%,
-      transparent 15%,
-      rgba(52, 89, 208, 0.9) 15%,
-      rgba(52, 89, 208, 0.9) 35%,
-      transparent 35%,
-      transparent 55%,
-      rgba(52, 89, 208, 0.15) 55%,
-      rgba(52, 89, 208, 0.15) 75%,
-      transparent 75%);
+      var(--ptx-blue-500) 0%,
+      var(--ptx-blue-500) 0%,
+      rgba(25, 54, 115, 0.85) 0%,
+      rgba(25, 54, 115, 0.85) 0%,
+      rgba(25, 54, 115, 0.7) 0%,
+      rgba(25, 54, 115, 0.7) 0%,
+      rgba(25, 54, 115, 0.55) 0%,
+      rgba(25, 54, 115, 0.55) 0%,
+      rgba(25, 54, 115, 0.4) 0%,
+      rgba(25, 54, 115, 0.4) 0%,
+      rgba(25, 54, 115, 0.25) 0%,
+      rgba(25, 54, 115, 0.25) 0%,
+      rgba(25, 54, 115, 0.1) 0%,
+      rgba(25, 54, 115, 0.1) 0%,
+      transparent 0%);
 }
 
 /* Responsive: On tablets, make banner narrower */
