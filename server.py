@@ -30,6 +30,7 @@ def run_server(port=5000, host='0.0.0.0'):
     
     handler = NoCacheHTTPRequestHandler
     
+    socketserver.TCPServer.allow_reuse_address = True
     with socketserver.TCPServer((host, port), handler) as httpd:
         print(f"Server running at http://{host}:{port}/")
         print(f"Serving files from: {os.getcwd()}")
