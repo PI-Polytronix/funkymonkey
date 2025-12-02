@@ -681,37 +681,33 @@ p {
   background: none;
 }
 
-/* Hero banner image container for the right side */
+/* Hero banner image container for the right side (alternative approach) */
 .hero-banner-image {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  width: 55%;
-  background-color: var(--ptx-blue-500);
-  background-size: 100% 100%;
+  width: 50%;
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   z-index: 2;
+  opacity: 0.85;
   pointer-events: none;
 }
 
 /* Striped overlay to blend the banner image with the left side (bars style) */
 .hero-banner-image::before {
-  content: "";
-  position: absolute;
-  inset: 0;
   background:
     linear-gradient(to right,
-      transparent 0%,
-      transparent 5%,
-      rgba(52, 89, 208, 0.9) 5%,
-      rgba(52, 89, 208, 0.9) 15%,
-      transparent 15%,
-      transparent 30%,
-      rgba(52, 89, 208, 0.15) 30%,
-      rgba(52, 89, 208, 0.15) 40%,
-      transparent 40%);
+      transparent 0%,        /* Bar 1 START - transparent */
+      transparent 5%,       /* Bar 1 END (15% wide) */
+      rgba(52, 89, 208, 0.9) 5%,   /* Bar 2 START - solid blue, 0.9 = 90% opacity */
+      rgba(52, 89, 208, 0.9) 15%,   /* Bar 2 END (20% wide: 35-15) */
+      transparent 15%,       /* Bar 3 START - transparent */
+      transparent 30%,       /* Bar 3 END (20% wide) */
+      rgba(52, 89, 208, 0.15) 30%,  /* Bar 4 START - almost invisible, 0.15 = 15% opacity */
+      rgba(52, 89, 208, 0.15) 40%,  /* Bar 4 END (20% wide) */
+      transparent 40%);      /* Rest is transparent */
 }
 
 /* Responsive: On tablets, make banner narrower */
