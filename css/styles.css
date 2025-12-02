@@ -3063,17 +3063,35 @@ th {
 
 /* ---- IMAGE PLACEHOLDERS ---- */
 .img-placeholder {
-  background: linear-gradient(135deg, var(--ptx-slate-100) 0%, var(--ptx-slate-200) 100%);
-  border: 2px dashed var(--ptx-slate-300);
+  position: relative;
+  background-color: var(--ptx-slate-100);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.img-placeholder::before {
+  content: "Image Coming Soon";
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(135deg, var(--ptx-slate-100) 0%, var(--ptx-slate-200) 100%);
+  border: 2px dashed var(--ptx-slate-300);
+  border-radius: var(--radius-sm);
   color: var(--ptx-slate-400);
   font-size: var(--text-body-xs);
   font-weight: var(--weight-medium);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  z-index: 0;
+}
+
+.img-placeholder.has-image::before {
+  display: none;
 }
 
 .img-16x9 {
@@ -3138,33 +3156,6 @@ th {
 /* ==========================================================================
    23. PHASE 10 FINAL REFINEMENTS
    ========================================================================== */
-
-/* Ensure consistent img-placeholder styling */
-.img-placeholder {
-  background: linear-gradient(135deg, var(--ptx-slate-100) 0%, var(--ptx-slate-200) 100%);
-  border: 2px dashed var(--ptx-slate-300);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--ptx-slate-400);
-  font-size: var(--text-body-xs);
-  font-weight: var(--weight-medium);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.img-16x9 {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  margin-bottom: var(--space-5);
-}
-
-.img-4x3 {
-  aspect-ratio: 4 / 3;
-  width: 100%;
-  margin-bottom: var(--space-4);
-}
 
 /* Enhanced table borders */
 table {

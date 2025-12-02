@@ -4,7 +4,7 @@
 This is a static HTML website for Polytronix, Inc., a company specializing in rugged displays and integrated electronics for aerospace, defense, and industrial systems. The site was imported from GitHub and configured to run on Replit.
 
 **Status**: Fully functional and ready for deployment  
-**Last Updated**: December 1, 2025
+**Last Updated**: December 2, 2025
 
 ## Project Structure
 
@@ -113,8 +113,45 @@ The "Start application" workflow automatically runs the server when the Replit e
 | `certifications_banner.png` | certifications.html |
 | `contact_banner.png` | contact.html |
 
+### Placeholder Images (Hero Right Side)
+These appear in the gray "Image Coming Soon" box on industry/capability pages.
+
+| Filename | Page |
+|----------|------|
+| `aerospace_placeholder.png` | aerospace-defense.html |
+| `industrials_placeholder.png` | industrials.html |
+| `commercial_placeholder.png` | commercial-aviation.html |
+| `business_placeholder.png` | business-aviation.html |
+| `military_placeholder.png` | military-programs.html |
+| `helicopters_placeholder.png` | helicopters.html |
+| `simulation_placeholder.png` | simulation-training.html |
+| `maritime_placeholder.png` | maritime-marine.html |
+| `rail_placeholder.png` | rail-transit.html |
+| `oil_placeholder.png` | oil-gas.html |
+| `medical_placeholder.png` | medical-life-sciences.html |
+| `communications_placeholder.png` | communications-networking.html |
+| `energy_placeholder.png` | energy-utilities.html |
+| `industrial_placeholder.png` | industrial-equipment.html |
+| `transportation_placeholder.png` | transportation-automotive.html |
+| `displays_placeholder.png` | displays.html |
+| `optical_placeholder.png` | optical-bonding.html |
+| `electro_placeholder.png` | electro-mechanical-assemblies.html |
+| `cable_placeholder.png` | cable-wire-harnesses.html |
+| `box_placeholder.png` | box-builds.html |
+| `nvis_placeholder.png` | nvis-solutions.html |
+| `ruggedization_placeholder.png` | ruggedization.html |
+| `touch_placeholder.png` | touch-integration.html |
+| `pcb_placeholder.png` | pcb-assembly.html |
+| `machining_placeholder.png` | machining.html |
+| `harness_placeholder.png` | harness-design.html |
+| `lighting_placeholder.png` | instrument-lighting.html |
+| `panels_placeholder.png` | instrument-panels.html |
+| `engineering_placeholder.png` | custom-engineering.html |
+| `repair_placeholder.png` | repair-station.html |
+
 ### Recommended Image Sizes
 - **Banner/Hero images**: 1920 x 800 pixels (wide landscape)
+- **Placeholder images**: 800 x 600 pixels (4:3 aspect ratio)
 - **Favicon**: 32x32 and 16x16 pixels (square)
 - **Logo**: Around 200 x 50 pixels
 
@@ -124,10 +161,19 @@ All images go in `/assets/images/` except favicons which go in `/assets/favicons
 ## CSS Features for Images
 
 ### Hero Banner Images
-- CSS class: `.hero-with-banner`
-- The banner image appears on the right side of the hero
-- Blue gradient overlay blends the image with the left content area
-- Images are automatically sized/cropped with `background-size: cover`
+- CSS class: `.hero-with-banner` + `.hero-banner-image`
+- The banner image appears on the right side of the hero (55% width)
+- Vertical bar overlay blends the image with the solid blue left side
+- Bar settings in CSS lines 707-717: transparent, 90% blue, transparent, 15% blue
+- Images are stretched to fill with `background-size: 100% 100%`
+
+### Placeholder Images (Hero Right Content)
+- CSS class: `.img-placeholder`
+- Displays product/feature images in the hero-right content area
+- By default: Shows gray "Image Coming Soon" text (fallback)
+- To show image: Add `has-image` class to the div after uploading the image file
+- Example: `<div class="img-placeholder img-4x3 has-image" style="background-image: url('/assets/images/aerospace_placeholder.png');"></div>`
+- Uses 4:3 aspect ratio (`.img-4x3` class)
 
 ### Section Background Images
 - CSS class: `.section-with-bg`
@@ -187,6 +233,13 @@ Note: These redirects use Netlify format and may need adaptation for Replit depl
 - PCB Assembly, Machining, Custom Engineering, Repair Station
 
 ## Recent Changes
+
+**December 2, 2025**
+- Changed hero banner overlay from smooth gradient to vertical bars
+- Made first visible bar 70% transparent (0.3 opacity)
+- Added placeholder image system for hero-right content areas
+- Updated all 30 industry/capability pages with placeholder image references
+- Naming convention: `pagename_placeholder.png` (e.g., `aerospace_placeholder.png`)
 
 **December 1, 2025**
 - Initial import from GitHub
