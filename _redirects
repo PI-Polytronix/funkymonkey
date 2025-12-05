@@ -1,66 +1,74 @@
-# Polytronix Website Redirects
-# Format: /old-path /new-path [status-code]
+# Polytronix URL Redirects - Updated for Nested Structure
 
-# Industry pages - Main
-/aerospace-defense.html /industries/aerospace-defense 301
-/industrials.html /industries/industrials 301
+# Industries - Main pages
+/aerospace-defense /industries/aerospace-defense.html 301
+/aerospace-defense.html /industries/aerospace-defense.html 301
+/industrials /industries/industrials.html 301
+/industrials.html /industries/industrials.html 301
 
-# Industry pages - Aerospace & Defense sub-industries
-/commercial-aviation.html /industries/aerospace-defense/commercial-aviation 301
-/business-aviation.html /industries/aerospace-defense/business-general-aviation 301
-/business-general-aviation.html /industries/aerospace-defense/business-general-aviation 301
-/military-programs.html /industries/aerospace-defense/military-programs 301
-/helicopters.html /industries/aerospace-defense/helicopters 301
-/simulation-training.html /industries/aerospace-defense/simulation-training 301
-/maritime-marine.html /industries/aerospace-defense/maritime-marine 301
-/maritime.html /industries/aerospace-defense/maritime-marine 301
+# Industries - Aerospace & Defense sub-pages
+/commercial-aviation /industries/aerospace-defense/commercial-aviation.html 301
+/commercial-aviation.html /industries/aerospace-defense/commercial-aviation.html 301
+/business-aviation /industries/aerospace-defense/business-aviation.html 301
+/business-aviation.html /industries/aerospace-defense/business-aviation.html 301
+/military-programs /industries/aerospace-defense/military-programs.html 301
+/military-programs.html /industries/aerospace-defense/military-programs.html 301
+/helicopters /industries/aerospace-defense/helicopters.html 301
+/helicopters.html /industries/aerospace-defense/helicopters.html 301
+/simulation-training /industries/aerospace-defense/simulation-training.html 301
+/simulation-training.html /industries/aerospace-defense/simulation-training.html 301
+/maritime-marine /industries/aerospace-defense/maritime-marine.html 301
+/maritime-marine.html /industries/aerospace-defense/maritime-marine.html 301
 
-# Industry pages - Industrials sub-industries
-/transportation-automotive.html /industries/industrials/transportation-automotive 301
-/rail-transit.html /industries/industrials/rail-transit 301
-/oil-gas.html /industries/industrials/oil-gas 301
-/medical-life-sciences.html /industries/industrials/medical-life-sciences 301
-/medical.html /industries/industrials/medical-life-sciences 301
-/communications-networking.html /industries/industrials/communications-networking 301
-/communications.html /industries/industrials/communications-networking 301
-/energy-utilities.html /industries/industrials/energy-utilities 301
-/industrial-equipment.html /industries/industrials/industrial-equipment 301
+# Industries - Industrials sub-pages
+/rail-transit /industries/industrials/rail-transit.html 301
+/rail-transit.html /industries/industrials/rail-transit.html 301
+/energy-utilities /industries/industrials/energy-utilities.html 301
+/energy-utilities.html /industries/industrials/energy-utilities.html 301
+/transportation-automotive /industries/industrials/transportation-automotive.html 301
+/transportation-automotive.html /industries/industrials/transportation-automotive.html 301
+/medical-life-sciences /industries/industrials/medical-life-sciences.html 301
+/medical-life-sciences.html /industries/industrials/medical-life-sciences.html 301
+/oil-gas /industries/industrials/oil-gas.html 301
+/oil-gas.html /industries/industrials/oil-gas.html 301
+/communications-networking /industries/industrials/communications-networking.html 301
+/communications-networking.html /industries/industrials/communications-networking.html 301
+/industrial-equipment /industries/industrials/industrial-equipment.html 301
+/industrial-equipment.html /industries/industrials/industrial-equipment.html 301
 
-# Capability pages
-/displays.html /capabilities/displays 301
-/optical-bonding.html /capabilities/optical-bonding 301
-/electro-mechanical-assemblies.html /capabilities/electro-mechanical-assemblies 301
-/electro-mechanical.html /capabilities/electro-mechanical-assemblies 301
-/cable-wire-harnesses.html /capabilities/cable-wire-harnesses 301
-/cable-assemblies.html /capabilities/cable-wire-harnesses 301
-/box-builds.html /capabilities/box-builds 301
-/nvis-solutions.html /capabilities/nvis-solutions 301
-/nvis.html /capabilities/nvis-solutions 301
-/ruggedization.html /capabilities/ruggedization 301
-/touch-integration.html /capabilities/touch-integration 301
-/pcb-assembly.html /capabilities/pcb-assembly 301
-/machining.html /capabilities/machining 301
-/harness-design.html /capabilities/harness-design 301
-/instrument-lighting.html /capabilities/instrument-lighting 301
-/instrument-panels.html /capabilities/instrument-panels 301
-/custom-engineering.html /capabilities/custom-engineering 301
-/repair-station.html /capabilities/repair-station 301
-/repair.html /capabilities/repair-station 301
+# Capabilities
+/displays /capabilities/displays.html 301
+/displays.html /capabilities/displays.html 301
+/optical-bonding /capabilities/optical-bonding.html 301
+/optical-bonding.html /capabilities/optical-bonding.html 301
+/nvis-solutions /capabilities/nvis-solutions.html 301
+/nvis-solutions.html /capabilities/nvis-solutions.html 301
+/ruggedization /capabilities/ruggedization.html 301
+/ruggedization.html /capabilities/ruggedization.html 301
+/touch-integration /capabilities/touch-integration.html 301
+/touch-integration.html /capabilities/touch-integration.html 301
+/electro-mechanical-assemblies /capabilities/electro-mechanical-assemblies.html 301
+/electro-mechanical-assemblies.html /capabilities/electro-mechanical-assemblies.html 301
+/box-builds /capabilities/box-builds.html 301
+/box-builds.html /capabilities/box-builds.html 301
+/instrument-panels /capabilities/instrument-panels.html 301
+/instrument-panels.html /capabilities/instrument-panels.html 301
+/instrument-lighting /capabilities/instrument-lighting.html 301
+/instrument-lighting.html /capabilities/instrument-lighting.html 301
+/cable-wire-harnesses /capabilities/cable-wire-harnesses.html 301
+/cable-wire-harnesses.html /capabilities/cable-wire-harnesses.html 301
+/harness-design /capabilities/harness-design.html 301
+/harness-design.html /capabilities/harness-design.html 301
+/pcb-assembly /capabilities/pcb-assembly.html 301
+/pcb-assembly.html /capabilities/pcb-assembly.html 301
+/machining /capabilities/machining.html 301
+/machining.html /capabilities/machining.html 301
+/custom-engineering /capabilities/custom-engineering.html 301
+/custom-engineering.html /capabilities/custom-engineering.html 301
+/repair-station /capabilities/repair-station.html 301
+/repair-station.html /capabilities/repair-station.html 301
 
-# Overview pages
-/capabilities.html /capabilities/ 301
-/industries.html /industries/ 301
-
-# Other pages
-/certifications.html /quality-compliance/certifications 301
-/compliance.html /quality-compliance/compliance-statements 301
-/about.html /about 301
-/contact.html /contact 301
-/case-studies.html /resources/case-studies 301
-/datasheets.html /resources/datasheets 301
-/white-papers.html /resources/white-papers 301
-
-# Trailing slash normalization
-/industries /industries/ 301
-/capabilities /capabilities/ 301
-/resources /resources/ 301
+# Trailing slash normalization for nested paths
+/industries/aerospace-defense /industries/aerospace-defense.html 301
+/industries/industrials /industries/industrials.html 301
+/capabilities/displays /capabilities/displays.html 301
