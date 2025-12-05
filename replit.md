@@ -4,26 +4,60 @@
 This is a static HTML website for Polytronix, Inc., a company specializing in rugged displays and integrated electronics for aerospace, defense, and industrial systems. The site was imported from GitHub and configured to run on Replit.
 
 **Status**: Fully functional and ready for deployment  
-**Last Updated**: December 2, 2025
+**Last Updated**: December 5, 2025
 
 ## Project Structure
 
 ```
 .
-├── index.html              # Homepage
-├── about.html              # About page
-├── industries.html         # Industries overview
-├── capabilities.html       # Capabilities overview
-├── certifications.html     # Quality & certifications
-├── contact.html            # Contact form
+├── index.html                          # Homepage
+├── about.html                          # About page
+├── industries.html                     # Industries overview
+├── capabilities.html                   # Capabilities overview
+├── certifications.html                 # Quality & certifications
+├── contact.html                        # Contact form
+├── industries/
+│   ├── aerospace-defense.html          # Aerospace & Defense overview
+│   ├── industrials.html                # Industrials overview
+│   ├── aerospace-defense/              # Aerospace sub-pages
+│   │   ├── commercial-aviation.html
+│   │   ├── business-aviation.html
+│   │   ├── military-programs.html
+│   │   ├── helicopters.html
+│   │   ├── simulation-training.html
+│   │   └── maritime-marine.html
+│   └── industrials/                    # Industrials sub-pages
+│       ├── rail-transit.html
+│       ├── energy-utilities.html
+│       ├── transportation-automotive.html
+│       ├── medical-life-sciences.html
+│       ├── oil-gas.html
+│       ├── communications-networking.html
+│       └── industrial-equipment.html
+├── capabilities/                       # All capability pages
+│   ├── displays.html
+│   ├── optical-bonding.html
+│   ├── nvis-solutions.html
+│   ├── ruggedization.html
+│   ├── touch-integration.html
+│   ├── electro-mechanical-assemblies.html
+│   ├── box-builds.html
+│   ├── instrument-panels.html
+│   ├── instrument-lighting.html
+│   ├── cable-wire-harnesses.html
+│   ├── harness-design.html
+│   ├── pcb-assembly.html
+│   ├── machining.html
+│   ├── custom-engineering.html
+│   └── repair-station.html
 ├── css/
-│   └── styles.css         # Main stylesheet (Design System 2.0)
+│   └── styles.css                      # Main stylesheet (Design System 2.0)
 ├── assets/
-│   ├── images/            # Logo, banners, and graphics
-│   └── favicons/          # Favicon files
-├── server.py              # Python HTTP server for development
-├── _redirects             # URL redirect rules (Netlify format)
-└── CNAME                  # Custom domain configuration
+│   ├── images/                         # Logo, banners, and graphics
+│   └── favicons/                       # Favicon files
+├── server.py                           # Python HTTP server for development
+├── _redirects                          # URL redirect rules (Netlify format)
+└── CNAME                               # Custom domain configuration
 ```
 
 ## Technology Stack
