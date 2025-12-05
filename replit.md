@@ -268,7 +268,19 @@ Note: These redirects use Netlify format and may need adaptation for Replit depl
 
 ## Recent Changes
 
-**December 5, 2025**
+**December 5, 2025 (Session 2)**
+- Implemented proper nested URL structure:
+  - /industries/aerospace-defense.html for Aerospace & Defense overview
+  - /industries/aerospace-defense/*.html for sub-industries (Commercial Aviation, Military Programs, etc.)
+  - /industries/industrials.html for Industrials overview
+  - /industries/industrials/*.html for sub-industries (Rail & Transit, Oil & Gas, etc.)
+  - /capabilities/*.html for all capability pages
+- Updated all internal links to use absolute paths starting with /
+- Updated canonical and og:url meta tags on all nested pages
+- Updated CSS "At a Glance" table first column to dark blue (#193673) for better readability
+- Updated _redirects file with all proper URL mappings for the nested structure
+
+**December 5, 2025 (Session 1)**
 - Removed duplicate "Speak to Engineering" buttons from all 30 industry/capability pages
 - Fixed internal links on aerospace-defense.html and industrials.html to use relative paths
 - Added "Industrial Equipment" to industries.html and industrials.html navigation
