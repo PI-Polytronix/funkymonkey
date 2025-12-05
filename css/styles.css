@@ -2981,7 +2981,11 @@ th {
 
 .at-a-glance th {
   width: 35%;
-  background: var(--ptx-slate-050);
+  background: #193673 !important;
+  color: #ffffff !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
 }
 
 .technical-details table {
