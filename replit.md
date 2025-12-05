@@ -234,6 +234,13 @@ Note: These redirects use Netlify format and may need adaptation for Replit depl
 
 ## Recent Changes
 
+**December 5, 2025**
+- Removed duplicate "Speak to Engineering" buttons from all 30 industry/capability pages
+- Fixed internal links on aerospace-defense.html and industrials.html to use relative paths
+- Added "Industrial Equipment" to industries.html and industrials.html navigation
+- Updated _redirects file with all proper URL mappings including alternate filenames
+- Activated all 29 placeholder images by adding `has-image` class
+
 **December 2, 2025**
 - Changed hero banner overlay from smooth gradient to vertical bars
 - Made first visible bar 70% transparent (0.3 opacity)
