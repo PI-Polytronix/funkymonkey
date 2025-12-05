@@ -1831,11 +1831,11 @@ select {
 }
 
 .at-a-glance th {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--ptx-blue-600);
   font-weight: var(--weight-semibold);
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--ptx-white);
   width: 38%;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
   font-size: var(--text-body-xs);
 }
 
