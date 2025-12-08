@@ -1168,6 +1168,15 @@ select {
   color: var(--ptx-amber-400);
 }
 
+/* Stat cards on navy background - better contrast */
+.section-navy .card-stat .stat-number {
+  color: var(--ptx-amber-500);
+}
+
+.section-navy .card-stat .stat-label {
+  color: var(--ptx-white);
+}
+
 /* Section Headers */
 .section-header {
   text-align: center;
