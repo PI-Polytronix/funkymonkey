@@ -1708,6 +1708,7 @@ select {
   /* Mobile Buttons */
   .btn-group {
     flex-direction: column;
+    align-items: center;
   }
 
   .cta-band .btn-group .btn {
