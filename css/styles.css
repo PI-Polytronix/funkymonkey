@@ -289,6 +289,9 @@ p {
 
 .text-center {
   text-align: center;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .text-right {
@@ -524,7 +527,7 @@ p {
 .hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(115deg, var(--ptx-blue-500) 0%, var(--ptx-blue-600) 100%);
+  background: var(--ptx-blue-500);
   color: var(--ptx-white);
   padding: var(--space-7) 0;
   /* Reduced from space-9 (96px) to space-7 (48px) - 50% reduction */
@@ -1194,7 +1197,7 @@ select {
 
 /* CTA Band */
 .cta-band {
-  background: linear-gradient(115deg, var(--ptx-blue-500) 0%, var(--ptx-blue-600) 100%);
+  background: var(--ptx-blue-500);
   color: var(--ptx-white);
   padding: var(--space-8) 0;
   text-align: center;
