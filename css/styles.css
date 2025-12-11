@@ -26,13 +26,13 @@
 
 :root {
   /* Primary Colors - From Booth Identity */
-  --ptx-blue-600: #193673;
+  --ptx-blue-600: #1c3b84;
   /* Cobalt Blue - Deep anchor */
-  --ptx-blue-500: #3459D0;
+  --ptx-blue-500: #1c3b84;
   /* Electric Blue - Primary brand */
-  --ptx-blue-400: #4A6FE3;
+  --ptx-blue-400: #1c3b84;
   /* Light Electric - Hover states */
-  --ptx-blue-300: #7B9AEF;
+  --ptx-blue-300: #4A6FE3;
   /* Soft Blue - Disabled/muted */
   --ptx-navy-700: #223651;
   /* Shadow Navy - Dark backgrounds */
@@ -541,7 +541,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(52, 89, 208, 0.95) 0%, rgba(25, 54, 115, 0.8) 100%);
+  background: var(--ptx-blue-600);
   z-index: 1;
 }
 
@@ -702,15 +702,24 @@ p {
 .hero-banner-image::before {
   background:
     linear-gradient(to right,
-      transparent 0%,        /* Bar 1 START - transparent */
-      transparent 5%,       /* Bar 1 END (15% wide) */
-      rgba(52, 89, 208, 0.9) 5%,   /* Bar 2 START - solid blue, 0.9 = 90% opacity */
-      rgba(52, 89, 208, 0.9) 15%,   /* Bar 2 END (20% wide: 35-15) */
-      transparent 15%,       /* Bar 3 START - transparent */
-      transparent 30%,       /* Bar 3 END (20% wide) */
-      rgba(52, 89, 208, 0.15) 30%,  /* Bar 4 START - almost invisible, 0.15 = 15% opacity */
-      rgba(52, 89, 208, 0.15) 40%,  /* Bar 4 END (20% wide) */
-      transparent 40%);      /* Rest is transparent */
+      transparent 0%,
+      /* Bar 1 START - transparent */
+      transparent 5%,
+      /* Bar 1 END (15% wide) */
+      rgba(52, 89, 208, 0.9) 5%,
+      /* Bar 2 START - solid blue, 0.9 = 90% opacity */
+      rgba(52, 89, 208, 0.9) 15%,
+      /* Bar 2 END (20% wide: 35-15) */
+      transparent 15%,
+      /* Bar 3 START - transparent */
+      transparent 30%,
+      /* Bar 3 END (20% wide) */
+      rgba(52, 89, 208, 0.15) 30%,
+      /* Bar 4 START - almost invisible, 0.15 = 15% opacity */
+      rgba(52, 89, 208, 0.15) 40%,
+      /* Bar 4 END (20% wide) */
+      transparent 40%);
+  /* Rest is transparent */
 }
 
 /* Responsive: On tablets, make banner narrower */
@@ -1353,7 +1362,7 @@ select {
 }
 
 .footer-nav a {
-  color: var(--ptx-slate-300);
+  color: var(--ptx-white);
   font-size: var(--text-body-sm);
 }
 
@@ -1371,15 +1380,13 @@ select {
 }
 
 .footer-contact p {
-  color: var(--ptx-slate-300);
-  font-size: var(--text-body-sm);
+  color: var(--ptx-white);
+  font-size: var(--text-body-lg);
   margin-bottom: var(--space-2);
-  line-height: 1.8;
 }
 
 .footer-contact a {
   color: var(--ptx-white);
-  font-weight: var(--weight-semibold);
 }
 
 .footer-contact a:hover {
