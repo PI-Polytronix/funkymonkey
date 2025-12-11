@@ -25,23 +25,28 @@
    ========================================================================== */
 
 :root {
-  /* Primary Colors - From Booth Identity */
+  /* Primary Colors */
   --ptx-blue-600: #1c3b84;
-  /* Cobalt Blue - Deep anchor */
+  /* Deep anchor */
+  
   --ptx-blue-500: #1c3b84;
-  /* Electric Blue - Primary brand */
-  --ptx-blue-400: #1c3b84;
+  /* Primary brand */
+  
+  --ptx-blue-400: #0c34cd;
   /* Light Electric - Hover states */
-  --ptx-blue-300: #4A6FE3;
-  /* Soft Blue - Disabled/muted */
+  
+  --ptx-blue-300: #DADBDD;
+  /* Disabled/muted */
+  
   --ptx-navy-700: #223651;
-  /* Shadow Navy - Dark backgrounds */
-  --ptx-navy-600: #2D4766;
-  /* Navy Mid - Secondary darks */
+  /* Dark backgrounds */
+  
+  --ptx-navy-600: #223651;
+  /* Secondary darks */
 
   /* Accent Colors */
-  --ptx-amber-500: #F5D742;
-  /* Electric Amber - Highlight/CTAs */
+  --ptx-amber-500: #ECCC2C;
+  /*  Highlight/CTAs */
   --ptx-amber-400: #FFE566;
   /* Light Amber - Hover */
   --ptx-amber-600: #D4B832;
@@ -1322,7 +1327,7 @@ select {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+  grid-template-columns: 2fr 1fr 2fr 1fr 2fr;
   gap: var(--space-6);
   margin-bottom: var(--space-6);
   align-items: start;
@@ -1368,6 +1373,25 @@ select {
 
 .footer-nav a:hover {
   color: var(--ptx-white);
+}
+
+/* Compact two-column capabilities list */
+.footer-nav-wide {
+  grid-column: span 2;
+}
+
+.footer-nav-wide ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 var(--space-4);
+}
+
+.footer-nav-wide li {
+  margin-bottom: var(--space-1);
+}
+
+.footer-nav-wide a {
+  font-size: var(--text-body-xs);
 }
 
 .footer-contact h4 {
