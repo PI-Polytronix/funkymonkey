@@ -2211,6 +2211,18 @@ select {
   margin-bottom: var(--space-4);
 }
 
+/* Industries page - prominent card styling */
+.card-industry.card-large {
+  border: 3px solid var(--ptx-blue-500);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-industry.card-large:hover {
+  border-color: var(--ptx-blue-600);
+  box-shadow: 0 20px 40px rgba(0, 51, 102, 0.15);
+  transform: translateY(-4px);
+}
+
 .card-list {
   list-style: none;
   padding: 0;
