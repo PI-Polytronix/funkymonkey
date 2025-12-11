@@ -1327,8 +1327,8 @@ select {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr 1fr 2fr;
-  gap: var(--space-6);
+  grid-template-columns: 1.5fr 1fr 2fr 1fr 1.5fr;
+  gap: var(--space-5);
   margin-bottom: var(--space-6);
   align-items: start;
 }
@@ -1376,14 +1376,15 @@ select {
 }
 
 /* Compact two-column capabilities list */
-.footer-nav-wide {
+.footer-nav-wide h4 {
+  text-align: center;
   grid-column: span 2;
 }
 
 .footer-nav-wide ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0 var(--space-4);
+  gap: 0 var(--space-2);
 }
 
 .footer-nav-wide li {
@@ -1404,9 +1405,10 @@ select {
 }
 
 .footer-contact p {
-  color: var(--ptx-white);
-  font-size: var(--text-body-lg);
+  color: var(--ptx-slate-300);
+  font-size: var(--text-body-xs);
   margin-bottom: var(--space-2);
+  line-height: 1.6;
 }
 
 .footer-contact a {
