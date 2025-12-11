@@ -1376,9 +1376,12 @@ select {
 }
 
 /* Compact two-column capabilities list */
+.footer-nav-wide {
+  margin-left: -20px;
+}
+
 .footer-nav-wide h4 {
   text-align: center;
-  grid-column: span 2;
 }
 
 .footer-nav-wide ul {
@@ -1405,10 +1408,10 @@ select {
 }
 
 .footer-contact p {
-  color: var(--ptx-slate-300);
-  font-size: var(--text-body-xs);
+  color: var(--ptx-white);
+  font-size: var(--text-body-sm);
   margin-bottom: var(--space-2);
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .footer-contact a {
