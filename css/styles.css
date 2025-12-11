@@ -597,10 +597,8 @@ p {
 
 /* Hero Type B - Section (Interior Pages) */
 .hero-compact {
-  min-height: 200px;
-  /* Reduced from 280px */
+  min-height: 400px;
   padding: var(--space-5) 0;
-  /* Reduced from space-7 (48px) to space-5 (24px) */
 }
 
 .hero-compact .hero-content {
@@ -2211,6 +2209,18 @@ select {
 
 .card-large p {
   margin-bottom: var(--space-4);
+}
+
+/* Industries page - prominent card styling */
+.card-industry.card-large {
+  border: 3px solid var(--ptx-blue-500);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-industry.card-large:hover {
+  border-color: var(--ptx-blue-600);
+  box-shadow: 0 20px 40px rgba(0, 51, 102, 0.15);
+  transform: translateY(-4px);
 }
 
 .card-list {
