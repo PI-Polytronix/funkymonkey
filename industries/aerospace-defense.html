@@ -10,7 +10,7 @@
  <meta property="og:description" content="AS9100D-certified displays, panels, and assemblies for cockpit, mission, and support equipment applications. ITAR registered with DO-160 alignment.">
  <meta property="og:url" content="https://www.polytronix.com/industries/aerospace-defense.html">
  <meta property="og:type" content="website">
- <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+ <link rel="icon" type="image/svg+xml" sizes="32x32" href="/assets/favicons/favicon-32.svg">
  <link rel="stylesheet" href="/css/styles.css">
  <script type="application/ld+json">
  {
@@ -54,7 +54,7 @@
  <main>
  <!-- HERO: Two-Column Layout -->
  <section class="hero hero-two-col hero-with-banner">
- <div class="hero-banner-image" style="background-image: url('/assets/images/aerospace_banner.png');"></div>
+ <div class="hero-banner-image" style="background-image: url('/assets/images/aerospace_banner.jpg');"></div>
  <div class="container">
  <div class="hero-grid">
  <div class="hero-left">
@@ -80,7 +80,7 @@
  </div>
  
  <div class="hero-right">
-     <div class="img-placeholder img-4x3 has-image" style="background-image: url('/assets/images/aerospace_placeholder.png');"></div>
+     <div class="img-placeholder img-4x3 has-image" style="background-image: url('/assets/images/aerospace_placeholder.jpg');"></div>
      <div class="at-a-glance">
  <div class="at-a-glance-header">
  <h2>At a Glance</h2>
@@ -306,11 +306,12 @@
 </div>
 </div>
  <div class="footer-bottom">
- <p class="footer-legal">&copy; 2025 Polytronix, Inc. All rights reserved.</p>
+ <p class="footer-legal">&copy; 2025copy; <span id="year"></span> Polytronix, Inc. All rights reserved.</p>
  <div class="footer-certs"><span class="text-sm">AS9100D • ISO 9001 • ITAR Registered</span></div>
  </div>
  </div>
  </footer>
-<script src="/js/image-fallback.js"></script>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

@@ -42,7 +42,8 @@
  <div class="btn-group"><a href="/contact.html" class="btn btn-primary">Start a Project</a><a href="/certifications.html" class="btn btn-white">View Certifications</a></div>
  </div></section>
  </main>
- <footer class="site-footer"><div class="container"><div class="footer-bottom"><p class="footer-legal">&copy; 2025 Polytronix, Inc.</p></div></div></footer>
-<script src="/js/image-fallback.js"></script>
+ <footer class="site-footer"><div class="container"><div class="footer-bottom"><p class="footer-legal">&copy; 2025copy; <span id="year"></span> Polytronix, Inc.</p></div></div></footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

@@ -9,7 +9,7 @@
 <meta property="og:url" content="https://www.polytronix.com/capabilities/touch-integration.html">
  <meta property="og:title" content="Touch Integration | Polytronix | Aerospace & Industrial Manufacturing">
  <meta property="og:description" content="Resistive and capacitive touch integration for ruggedized display systems. Glove-compatible designs with multi-touch and NVIS options available.">
- <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+ <link rel="icon" type="image/svg+xml" sizes="32x32" href="/assets/favicons/favicon-32.svg">
  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
@@ -43,7 +43,7 @@
 
  <main>
  <section class="hero hero-two-col hero-with-banner">
- <div class="hero-banner-image" style="background-image: url('/assets/images/touch_banner.png');"></div>
+ <div class="hero-banner-image" style="background-image: url('/assets/images/touch_banner.jpg');"></div>
  <div class="container">
  <div class="hero-grid">
  <div class="hero-left">
@@ -68,7 +68,7 @@
  </div>
  
  <div class="hero-right">
-     <div class="img-placeholder img-4x3 has-image" style="background-image: url('/assets/images/touch_placeholder.png');"></div>
+     <div class="img-placeholder img-4x3 has-image" style="background-image: url('/assets/images/touch_placeholder.jpg');"></div>
      <div class="at-a-glance">
  <div class="at-a-glance-header"><h2>At a Glance</h2></div>
  <table>
@@ -186,9 +186,10 @@
 11005 Ralston Rd., Arvada CO 80004</p>
 </div>
 </div>
- <div class="footer-bottom"><p class="footer-legal">&copy; 2025 Polytronix, Inc.</p><div class="footer-certs"><span class="text-sm">AS9100D • ISO 9001 • ITAR</span></div></div>
+ <div class="footer-bottom"><p class="footer-legal">&copy; 2025copy; <span id="year"></span> Polytronix, Inc.</p><div class="footer-certs"><span class="text-sm">AS9100D • ISO 9001 • ITAR</span></div></div>
  </div>
  </footer>
-<script src="/js/image-fallback.js"></script>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

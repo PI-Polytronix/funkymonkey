@@ -8,7 +8,7 @@
  <link rel="canonical" href="https://www.polytronix.com/industries.html">
  <meta property="og:title" content="Industries | Polytronix | Aerospace & Industrial Manufacturing">
  <meta property="og:description" content="Polytronix serves aerospace, defense, and industrial markets with rugged displays, harnesses, and electro-mechanical assemblies. AS9100D certified.">
- <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+ <link rel="icon" type="image/svg+xml" sizes="32x32" href="/assets/favicons/favicon-32.svg">
  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
@@ -138,9 +138,10 @@
 11005 Ralston Rd., Arvada CO 80004</p>
 </div>
 </div>
- <div class="footer-bottom"><p class="footer-legal">&copy; 2025 Polytronix, Inc.</p><div class="footer-certs"><span class="text-sm">AS9100D • ISO 9001 • ITAR</span></div></div>
+ <div class="footer-bottom"><p class="footer-legal">&copy; 2025copy; <span id="year"></span> Polytronix, Inc.</p><div class="footer-certs"><span class="text-sm">AS9100D • ISO 9001 • ITAR</span></div></div>
  </div>
  </footer>
-<script src="/js/image-fallback.js"></script>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
