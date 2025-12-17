@@ -700,7 +700,10 @@ p {
   opacity: 0.85;
   pointer-events: none;
 }
-
+/* Reserve space for the banner so text cannot overlap it */
+.hero-with-banner .hero-content {
+  max-width: 85%;
+}
 /* Striped overlay to blend the banner image with the left side (bars style) */
 .hero-banner-image::before {
   background:
@@ -1337,7 +1340,7 @@ select {
 
 .footer-brand .logo img {
   height: 24px;
-  filter: brightness(0.25) invert(1);
+  filter: brightness(0.25) invert(1) !important;
 }
 
 .footer-brand p {
