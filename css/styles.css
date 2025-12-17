@@ -1337,7 +1337,7 @@ select {
 
 .footer-brand .logo img {
   height: 24px;
-  filter: brightness(0.25) invert(1);
+  filter: brightness(0.25) invert(1) !important;
 }
 
 .footer-brand p {
