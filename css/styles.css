@@ -2277,865 +2277,10 @@ select {
    19. PATCH v6 - SPACING CONSISTENCY & ENHANCEMENTS
    ========================================================================== */
 
-/* Consistent section spacing: 24-32px */
-.section {
-  padding: var(--space-6) 0;
-  /* 32px */
-}
-
-.section-compact {
-  padding: var(--space-5) 0;
-  /* 24px */
-}
-
-/* Consistent spacing under H2 headings */
-.section h2 {
-  margin-bottom: var(--space-5);
-  /* 24px */
-}
-
-/* Consistent table spacing */
-.technical-details {
-  margin-top: var(--space-5);
-  margin-bottom: var(--space-5);
-}
-
-/* Consistent hero margin */
-.hero+.section,
-.hero+.section-compact {
-  margin-top: 0;
-}
-
-/* Overview section styling for sub-industry pages */
-.section-overview {
-  padding: var(--space-5) 0;
-  background: var(--ptx-white);
-}
-
-.section-overview p {
-  max-width: 75ch;
-  line-height: var(--lh-relaxed);
-  color: var(--ptx-slate-600);
-  margin: 0;
-}
-
-/* Specs Summary label above tables (optional enhancement) */
-.specs-label {
-  font-size: var(--text-body-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--ptx-slate-500);
-  margin-bottom: var(--space-2);
-  font-weight: var(--weight-semibold);
-}
-
-/* Image placeholder (optional enhancement) */
-.image-placeholder {
-  background: linear-gradient(135deg, var(--ptx-slate-100) 0%, var(--ptx-slate-200) 100%);
-  border: 2px dashed var(--ptx-slate-300);
-  border-radius: var(--radius-md);
-  padding: var(--space-7) var(--space-5);
-  text-align: center;
-  color: var(--ptx-slate-500);
-  font-size: var(--text-body-sm);
-  font-weight: var(--weight-medium);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: var(--space-5);
-  aspect-ratio: 16 / 9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Use Cases micro-subheading (optional enhancement) */
-.micro-subheading {
-  font-size: var(--text-body-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--ptx-slate-500);
-  margin-bottom: var(--space-2);
-  font-weight: var(--weight-semibold);
-}
-
-/* Ensure consistent card grid spacing */
-.card-grid {
-  margin-top: var(--space-5);
-}
-
-/* Certifications section consistency */
-.certifications-inline {
-  margin-bottom: var(--space-4);
-}
-
-/* CTA band consistent spacing */
-.cta-band {
-  padding: var(--space-7) 0;
-}
-
-/* Fix any remaining table inconsistencies */
-.table-wrapper {
-  margin-top: var(--space-4);
-  margin-bottom: var(--space-4);
-}
-
 /* ==========================================================================
-   20. PATCH v7 - FINAL REFINEMENTS
+   19. IMAGE PLACEHOLDERS & FINAL REFINEMENTS
    ========================================================================== */
 
-/* ---- GLOBAL SPACING RULES ---- */
-/* Section to section: 32px */
-.section+.section {
-  margin-top: 0;
-}
-
-.section {
-  padding: var(--space-6) 0;
-  /* 32px */
-}
-
-/* H2 to content: 16px */
-.section h2 {
-  margin-bottom: var(--space-4);
-  /* 16px */
-}
-
-/* Table spacing: 24px top/bottom */
-.technical-details,
-.table-wrapper {
-  margin-top: var(--space-5);
-  /* 24px */
-  margin-bottom: var(--space-5);
-}
-
-/* CTA above: 32px */
-.cta-band {
-  margin-top: var(--space-6);
-  /* 32px */
-  padding: var(--space-6) 0;
-  /* Reduced padding */
-}
-
-/* CTA bottom above footer: minimal */
-.cta-band+footer {
-  margin-top: 0;
-}
-
-/* ---- CATEGORY LABELS ---- */
-.category-label {
-  display: inline-block;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.7);
-  background: rgba(255, 255, 255, 0.1);
-  padding: 4px 10px;
-  border-radius: 3px;
-  margin-bottom: var(--space-3);
-  font-weight: var(--weight-semibold);
-}
-
-/* ---- WHY IT MATTERS LINE ---- */
-.why-matters {
-  font-size: var(--text-body-sm);
-  color: rgba(255, 255, 255, 0.8);
-  font-style: italic;
-  margin-top: var(--space-3);
-  margin-bottom: 0;
-  padding-left: var(--space-3);
-  border-left: 2px solid var(--ptx-amber-500);
-}
-
-/* ---- MICRO SUBHEADINGS ---- */
-.micro-label {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--ptx-slate-500);
-  margin-bottom: var(--space-2);
-  font-weight: var(--weight-semibold);
-  display: block;
-}
-
-/* Hero applications micro-label */
-.hero-applications .micro-label {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-/* ---- OVERVIEW SECTION AT BOTTOM (Sub-Industry Pages) ---- */
-.section-seo-overview {
-  background: var(--ptx-slate-050);
-  padding: var(--space-5) 0;
-  border-top: 1px solid var(--ptx-slate-200);
-}
-
-.section-seo-overview h3 {
-  font-size: var(--text-body-sm);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--ptx-slate-500);
-  margin-bottom: var(--space-3);
-  font-weight: var(--weight-semibold);
-}
-
-.section-seo-overview p {
-  color: var(--ptx-slate-600);
-  font-size: var(--text-body-sm);
-  line-height: var(--lh-relaxed);
-  max-width: 75ch;
-  margin: 0;
-}
-
-/* ---- IMAGE PLACEHOLDERS ---- */
-.image-placeholder {
-  background: linear-gradient(135deg, var(--ptx-slate-100) 0%, var(--ptx-slate-200) 100%);
-  border: 2px dashed var(--ptx-slate-300);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--ptx-slate-400);
-  font-size: var(--text-body-xs);
-  font-weight: var(--weight-medium);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.image-placeholder-hero {
-  aspect-ratio: 16 / 9;
-  padding: var(--space-6);
-}
-
-.image-placeholder-capability {
-  aspect-ratio: 4 / 3;
-  padding: var(--space-5);
-}
-
-/* ---- ENHANCED TECHNICAL DETAILS TABLE (Spec-Sheet Look) ---- */
-.technical-details {
-  background: var(--ptx-white);
-  border: 1px solid var(--ptx-slate-200);
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.technical-details-header {
-  background: var(--ptx-slate-100);
-  padding: 10px var(--space-4);
-  border-bottom: 1px solid var(--ptx-slate-200);
-}
-
-.technical-details-header h3 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.75px;
-  color: var(--ptx-navy-700);
-  margin: 0;
-  font-weight: var(--weight-semibold);
-}
-
-.technical-details table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: var(--text-body-sm);
-}
-
-.technical-details th,
-.technical-details td {
-  padding: 10px var(--space-4);
-  border-bottom: 1px solid var(--ptx-slate-200);
-  text-align: left;
-  vertical-align: middle;
-  line-height: 1.4;
-}
-
-.technical-details th {
-  background: var(--ptx-slate-050);
-  font-weight: var(--weight-semibold);
-  color: var(--ptx-slate-600);
-  width: 32%;
-  border-right: 1px solid var(--ptx-slate-200);
-  font-size: var(--text-body-xs);
-}
-
-.technical-details td {
-  color: var(--ptx-navy-700);
-}
-
-.technical-details tbody tr:nth-child(even) {
-  background: rgba(220, 227, 236, 0.3);
-}
-
-.technical-details tbody tr:nth-child(even) th {
-  background: var(--ptx-slate-100);
-}
-
-.technical-details tbody tr:last-child th,
-.technical-details tbody tr:last-child td {
-  border-bottom: none;
-}
-
-.technical-details tbody tr:hover {
-  background: var(--ptx-slate-100);
-}
-
-.technical-details tbody tr:hover th {
-  background: var(--ptx-slate-200);
-}
-
-/* ---- HERO TWO-COL LAYOUT REFINEMENTS ---- */
-.hero-two-col {
-  padding: var(--space-6) 0;
-  /* Reduced padding */
-  min-height: auto;
-}
-
-.hero-two-col .hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: var(--space-6);
-  align-items: start;
-}
-
-.hero-two-col .hero-left h1 {
-  font-size: 36px;
-  margin-bottom: var(--space-3);
-}
-
-.hero-two-col .hero-subheading {
-  font-size: var(--text-body);
-  margin-bottom: var(--space-4);
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.hero-two-col .hero-applications {
-  margin-bottom: var(--space-4);
-}
-
-.hero-two-col .hero-applications h2 {
-  font-size: var(--text-body-sm);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: var(--space-2);
-}
-
-.hero-two-col .hero-applications ul {
-  margin: 0;
-  padding-left: var(--space-4);
-}
-
-.hero-two-col .hero-applications li {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: var(--text-body-sm);
-  margin-bottom: 4px;
-  line-height: 1.4;
-}
-
-.hero-two-col .hero-ctas {
-  margin-top: var(--space-4);
-}
-
-/* ---- INLINE CTA ABOVE TABLE ---- */
-.inline-cta {
-  margin-bottom: var(--space-5);
-}
-
-.inline-cta .btn {
-  margin-bottom: var(--space-2);
-}
-
-/* ---- CERTIFICATION ICONS ---- */
-.cert-icon {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.cert-icon svg {
-  width: 14px;
-  height: 14px;
-  opacity: 0.7;
-}
-
-/* ---- RESPONSIVE REFINEMENTS ---- */
-@media (max-width: 1023px) {
-  .hero-two-col .hero-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-5);
-  }
-
-  .hero-two-col .hero-left h1 {
-    font-size: 32px;
-  }
-
-  .at-a-glance {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 767px) {
-  .hero-two-col {
-    padding: var(--space-5) 0;
-  }
-
-  .hero-two-col .hero-left h1 {
-    font-size: 28px;
-  }
-
-  .category-label {
-    font-size: 10px;
-    padding: 3px 8px;
-  }
-
-  .technical-details th,
-  .technical-details td {
-    padding: 8px var(--space-3);
-  }
-
-  .technical-details th {
-    width: 40%;
-  }
-}
-
-/* ==========================================================================
-   21. PHASE 8 REFINEMENTS - CONSISTENCY PATCH
-   ========================================================================== */
-
-/* ---- SECTION SPACING NORMALIZATION ---- */
-/* Section to section: 32px */
-.section {
-  padding: var(--space-6) 0;
-}
-
-.section-compact {
-  padding: var(--space-5) 0;
-}
-
-/* H2 to content: 16px */
-.section>.container>h2:first-child {
-  margin-bottom: var(--space-4);
-}
-
-/* Table margins: 24px */
-.technical-details,
-.table-wrapper {
-  margin-top: var(--space-5);
-  margin-bottom: var(--space-5);
-}
-
-/* CTA above table: 32px bottom margin */
-.inline-cta-section {
-  padding: var(--space-5) 0 0 0;
-}
-
-.inline-cta-section .inline-cta {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-3);
-}
-
-.inline-cta-section .why-line {
-  font-size: var(--text-body-sm);
-  color: var(--ptx-slate-600);
-  font-style: italic;
-  margin: 0;
-  padding-left: var(--space-3);
-  border-left: 2px solid var(--ptx-blue-500);
-}
-
-/* ---- ENHANCED TABLE STYLES (AEROSPACE SPEC-SHEET) ---- */
-/* Base table enhancements */
-table {
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  border: 1px solid var(--ptx-slate-200);
-}
-
-thead {
-  background: var(--ptx-slate-100);
-}
-
-th {
-  background: var(--ptx-slate-050);
-  border-right: 1px solid var(--ptx-slate-200);
-  font-size: var(--text-body-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-}
-
-th:last-child {
-  border-right: none;
-}
-
-td {
-  border-right: 1px solid var(--ptx-slate-200);
-}
-
-td:last-child {
-  border-right: none;
-}
-
-tbody tr:nth-child(even) {
-  background: rgba(220, 227, 236, 0.25);
-}
-
-/* Standardized row height and padding */
-th,
-td {
-  padding: 10px var(--space-4);
-  line-height: 1.4;
-  vertical-align: middle;
-}
-
-/* Table wrapper alignment */
-.table-wrapper {
-  max-width: 100%;
-}
-
-.table-wrapper table {
-  width: 100%;
-}
-
-/* ---- TECHNICAL DETAILS TABLE REFINEMENTS ---- */
-.technical-details {
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--ptx-slate-200);
-}
-
-.technical-details-header {
-  background: var(--ptx-slate-100);
-  padding: 10px var(--space-4);
-  border-bottom: 1px solid var(--ptx-slate-200);
-}
-
-.technical-details-header h3 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.75px;
-}
-
-.technical-details th {
-  width: 30%;
-  border-right: 1px solid var(--ptx-slate-200);
-  background: var(--ptx-slate-050);
-  font-size: var(--text-body-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-}
-
-.technical-details td {
-  font-size: var(--text-body-sm);
-}
-
-.technical-details tbody tr:nth-child(even) {
-  background: rgba(220, 227, 236, 0.25);
-}
-
-.technical-details tbody tr:nth-child(even) th {
-  background: var(--ptx-slate-100);
-}
-
-/* ---- IMAGE PLACEHOLDERS ---- */
-.image-placeholder {
-  background: linear-gradient(135deg, var(--ptx-slate-100) 0%, var(--ptx-slate-200) 100%);
-  border: 2px dashed var(--ptx-slate-300);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--ptx-slate-400);
-  font-size: var(--text-body-xs);
-  font-weight: var(--weight-medium);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.image-placeholder-hero {
-  aspect-ratio: 16 / 9;
-  padding: var(--space-6);
-  margin-bottom: var(--space-5);
-}
-
-.image-placeholder-capability {
-  aspect-ratio: 4 / 3;
-  padding: var(--space-5);
-  margin-bottom: var(--space-4);
-}
-
-/* ---- SEO OVERVIEW SECTION (BOTTOM) ---- */
-.section-seo-overview {
-  background: var(--ptx-slate-050);
-  padding: var(--space-5) 0;
-  border-top: 1px solid var(--ptx-slate-200);
-}
-
-.section-seo-overview h3 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.75px;
-  color: var(--ptx-slate-500);
-  margin-bottom: var(--space-3);
-  font-weight: var(--weight-semibold);
-}
-
-.section-seo-overview p {
-  color: var(--ptx-slate-600);
-  font-size: var(--text-body-sm);
-  line-height: var(--lh-relaxed);
-  max-width: 75ch;
-  margin: 0;
-}
-
-/* ---- CATEGORY LABELS ---- */
-.category-label {
-  display: inline-block;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.7);
-  background: rgba(255, 255, 255, 0.1);
-  padding: 4px 10px;
-  border-radius: 3px;
-  margin-bottom: var(--space-3);
-  font-weight: var(--weight-semibold);
-}
-
-/* ---- MICRO LABELS ---- */
-.micro-label {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--ptx-slate-500);
-  margin-bottom: var(--space-2);
-  font-weight: var(--weight-semibold);
-  display: block;
-}
-
-.hero-applications .micro-label {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-/* ---- WHY IT MATTERS LINE ---- */
-.why-matters {
-  font-size: var(--text-body-sm);
-  color: rgba(255, 255, 255, 0.8);
-  font-style: italic;
-  margin-top: var(--space-3);
-  margin-bottom: 0;
-  padding-left: var(--space-3);
-  border-left: 2px solid var(--ptx-amber-500);
-}
-
-/* ---- CTA BAND REFINEMENTS ---- */
-.cta-band {
-  margin-top: 0;
-  padding: var(--space-6) 0;
-}
-
-/* ---- CERTIFICATIONS LIST ---- */
-.certifications-inline {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-  list-style: none;
-  padding: 0;
-  margin: 0 0 var(--space-4);
-}
-
-.certifications-inline li {
-  background: var(--ptx-slate-100);
-  padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-sm);
-  font-size: var(--text-body-sm);
-  color: var(--ptx-navy-700);
-  margin: 0;
-}
-
-/* ---- CARD GRID SPACING ---- */
-.card-grid {
-  margin-top: var(--space-4);
-}
-
-.card-grid.mt-4 {
-  margin-top: var(--space-4);
-}
-
-.card-grid.mt-5 {
-  margin-top: var(--space-5);
-}
-
-/* ---- RESPONSIVE REFINEMENTS ---- */
-@media (max-width: 767px) {
-  .inline-cta-section .inline-cta {
-    align-items: stretch;
-  }
-
-  .inline-cta-section .btn {
-    text-align: center;
-  }
-
-  .certifications-inline {
-    flex-direction: column;
-    gap: var(--space-2);
-  }
-}
-
-
-/* ==========================================================================
-   22. PHASE 9 REFINEMENTS - FINAL POLISH
-   ========================================================================== */
-
-/* ---- TABLE VISUAL POLISH (ENGINEERING SPEC STYLE) ---- */
-table {
-  border-radius: 4px;
-  overflow: hidden;
-  border: 1px solid var(--ptx-slate-200);
-  border-collapse: separate;
-  border-spacing: 0;
-  width: 100%;
-}
-
-thead th {
-  background: var(--ptx-slate-100);
-  border-bottom: 2px solid var(--ptx-slate-300);
-  font-weight: var(--weight-semibold);
-  color: var(--ptx-navy-700);
-}
-
-tbody th,
-tbody td {
-  border-right: 1px solid var(--ptx-slate-200);
-  border-bottom: 1px solid var(--ptx-slate-200);
-}
-
-tbody th:last-child,
-tbody td:last-child {
-  border-right: none;
-}
-
-tbody tr:last-child th,
-tbody tr:last-child td {
-  border-bottom: none;
-}
-
-tbody tr:nth-child(even) {
-  background: rgba(220, 227, 236, 0.2);
-}
-
-tbody tr:nth-child(even) th {
-  background: var(--ptx-slate-050);
-}
-
-th,
-td {
-  padding: 12px var(--space-4);
-  line-height: 1.45;
-  vertical-align: middle;
-  font-size: var(--text-body-sm);
-}
-
-th {
-  text-align: left;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--ptx-slate-600);
-}
-
-/* At-a-glance table specific */
-.at-a-glance table {
-  border-radius: 0 0 4px 4px;
-}
-
-.at-a-glance th {
-  width: 35%;
-  background: #193673 !important;
-  color: #ffffff !important;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-weight: 600;
-}
-
-.technical-details table {
-  border-radius: 0 0 4px 4px;
-}
-
-.technical-details th {
-  width: 30%;
-}
-
-/* ---- SPACING CONSISTENCY ---- */
-/* Section to section: 32px */
-.section {
-  padding: var(--space-6) 0;
-}
-
-/* Compact section variant */
-.section-compact {
-  padding: var(--space-5) 0;
-}
-
-/* H2 to content: 16px */
-.section h2 {
-  margin-bottom: var(--space-4);
-}
-
-/* Table margins: 24px */
-.table-wrapper,
-.technical-details {
-  margin-top: var(--space-5);
-  margin-bottom: var(--space-5);
-}
-
-/* CTA above table spacing */
-.inline-cta-section {
-  padding: var(--space-5) 0 0 0;
-}
-
-.inline-cta-section+.section {
-  padding-top: var(--space-5);
-}
-
-/* CTA band spacing */
-.cta-band {
-  margin-top: 0;
-  padding: var(--space-6) 0;
-}
-
-/* Card grid spacing */
-.card-grid {
-  margin-top: var(--space-4);
-  gap: var(--space-5);
-}
-
-/* ---- SEO OVERVIEW SECTION REFINEMENTS ---- */
-.section-seo-overview {
-  background: var(--ptx-slate-050);
-  padding: 40px 0 var(--space-5);
-  border-top: 1px solid var(--ptx-slate-200);
-  margin-top: 0;
-}
-
-.section-seo-overview h3 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.75px;
-  color: var(--ptx-slate-500);
-  margin-bottom: var(--space-3);
-  font-weight: var(--weight-semibold);
-}
-
-.section-seo-overview p {
-  color: var(--ptx-slate-600);
-  font-size: var(--text-body-sm);
-  line-height: 1.4;
-  max-width: 75ch;
-  margin: 0;
-}
-
-/* ---- IMAGE PLACEHOLDERS ---- */
 .img-placeholder {
   position: relative;
   background-color: var(--ptx-slate-100);
@@ -3180,7 +2325,49 @@ th {
   margin-bottom: var(--space-4);
 }
 
-/* ---- INLINE CTA REFINEMENTS ---- */
+/* At-a-glance table specific */
+.at-a-glance table {
+  border-radius: 0 0 4px 4px;
+}
+
+.at-a-glance th {
+  width: 35%;
+  background: #193673 !important;
+  color: #ffffff !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* SEO Overview Section */
+.section-seo-overview {
+  background: var(--ptx-slate-050);
+  padding: var(--space-6) 0;
+  border-top: 1px solid var(--ptx-slate-200);
+}
+
+.section-seo-overview h3 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  color: var(--ptx-slate-500);
+  margin-bottom: var(--space-3);
+  font-weight: var(--weight-semibold);
+}
+
+.section-seo-overview p {
+  color: var(--ptx-slate-600);
+  font-size: var(--text-body-sm);
+  line-height: var(--lh-relaxed);
+  max-width: 75ch;
+  margin: 0;
+}
+
+/* Inline CTA Section */
+.inline-cta-section {
+  padding: var(--space-5) 0 0 0;
+}
+
 .inline-cta-section .inline-cta {
   display: flex;
   flex-direction: column;
@@ -3197,82 +2384,53 @@ th {
   border-left: 2px solid var(--ptx-blue-500);
 }
 
-/* ---- FOOTER SPACING ---- */
-.cta-band+.section-seo-overview {
-  margin-top: 0;
-}
-
-.section-seo-overview+.site-footer {
-  margin-top: 0;
-}
-
-/* ---- RESPONSIVE REFINEMENTS ---- */
-@media (max-width: 767px) {
-  .section {
-    padding: var(--space-5) 0;
-  }
-
-  .section-seo-overview {
-    padding: var(--space-5) 0;
-  }
-
-  th,
-  td {
-    padding: 10px var(--space-3);
-  }
-
-  .at-a-glance th {
-    width: 40%;
-  }
-}
-
-
-/* ==========================================================================
-   23. PHASE 10 FINAL REFINEMENTS
-   ========================================================================== */
-
-/* Enhanced table borders */
-table {
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-tbody th,
-tbody td {
-  border-right: 1px solid var(--ptx-slate-200);
-}
-
-tbody th:last-child,
-tbody td:last-child {
-  border-right: none;
-}
-
-/* SEO Overview section refinements */
-.section-seo-overview {
-  background: var(--ptx-slate-050);
-  padding: 40px 0 var(--space-5);
-  border-top: 1px solid var(--ptx-slate-200);
-}
-
-.section-seo-overview h3 {
+/* Category Labels */
+.category-label {
+  display: inline-block;
   font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.75px;
-  color: var(--ptx-slate-500);
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 3px;
   margin-bottom: var(--space-3);
+  font-weight: var(--weight-semibold);
 }
 
-.section-seo-overview p {
-  color: var(--ptx-slate-600);
+/* Micro Labels */
+.micro-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--ptx-slate-500);
+  margin-bottom: var(--space-2);
+  font-weight: var(--weight-semibold);
+  display: block;
+}
+
+.hero-applications .micro-label {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Why It Matters Line */
+.why-matters {
   font-size: var(--text-body-sm);
-  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.8);
+  font-style: italic;
+  margin-top: var(--space-3);
+  margin-bottom: 0;
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--ptx-amber-500);
 }
 
-/* CTA band to footer spacing */
-.cta-band+.section-seo-overview {
-  margin-top: 0;
-}
-
-.section-seo-overview+.site-footer {
-  margin-top: 0;
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .inline-cta-section .inline-cta {
+    align-items: stretch;
+  }
+  
+  .inline-cta-section .btn {
+    text-align: center;
+  }
 }
