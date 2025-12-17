@@ -72,3 +72,6 @@
 /industries/aerospace-defense /industries/aerospace-defense.html 301
 /industries/industrials /industries/industrials.html 301
 /capabilities/displays /capabilities/displays.html 301
+
+# 404 Fallback - must be last
+/*    /404.html    404
