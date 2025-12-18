@@ -4,18 +4,18 @@
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <title>Helicopters | Polytronix | Aerospace & Industrial Manufacturing</title>
- <meta name="description" content="Rotorcraft displays and control panels for commercial and military helicopter programs. NVIS-compatible with DO-160 environmental alignment.">
+ <meta name="description" content="Rotorcraft displays and control panels for commercial and military helicopter programs. NVIS-compatible with MIL-STD-7788 environmental alignment.">
  <link rel="canonical" href="https://www.polytronix.com/industries/aerospace-defense/helicopters.html">
 <meta property="og:url" content="https://www.polytronix.com/industries/aerospace-defense/helicopters.html">
  <meta property="og:title" content="Helicopters | Polytronix | Aerospace & Industrial Manufacturing">
- <meta property="og:description" content="Rotorcraft displays and control panels for commercial and military helicopter programs. NVIS-compatible with DO-160 environmental alignment.">
- <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+ <meta property="og:description" content="Rotorcraft displays and control panels for commercial and military helicopter programs. NVIS-compatible with MIL-STD-7788 environmental alignment.">
+ <link rel="icon" type="image/svg+xml" sizes="32x32" href="/assets/favicons/favicon-32.svg">
  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
  <header class="site-header">
  <div class="container header-inner">
- <a href="/index.html" class="logo"><img src="/assets/images/logo.PNG" alt="Polytronix" height="32"></a>
+ <a href="/index.html" class="logo"><img src="/assets/images/logo.PNG" alt="Polytronix Company Logo" height="32"></a>
  <input type="checkbox" id="nav-toggle" class="nav-toggle">
  <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
  <nav class="site-nav">
@@ -43,8 +43,7 @@
  </div>
 
  <main>
- <section class="hero hero-two-col hero-with-banner">
- <div class="hero-banner-image" style="background-image: url('/assets/images/helicopters_placeholder.jpg');"></div>
+ <section class="hero hero-two-col">
  <div class="container">
  <div class="hero-grid">
  <div class="hero-left">
@@ -69,7 +68,7 @@
  </div>
  
  <div class="hero-right">
-     <div class="img-placeholder img-4x3 has-image" style="background-image: url('/assets/images/helicopters_placeholder.jpg');"></div>
+     <div class="img-placeholder img-4x3 has-image" style="background-image: url('/assets/images/helicopters_placeholder.jpg');" role="img" aria-label="Polytronix helicopters image, showing a commercial helicopter."></div>
      <div class="at-a-glance">
  <div class="at-a-glance-header"><h2>At a Glance</h2></div>
  <table>
@@ -127,7 +126,7 @@
  <li>AS9100D</li>
  <li>ISO 9001:2015</li>
  <li>ITAR Registered</li>
- <li>DO-160 Aligned</li>
+ <li>MIL-STD-7788 Aligned</li>
  </ul>
  <p class="mt-4"><a href="/certifications.html">View all certifications →</a></p>
  </div>
@@ -148,7 +147,7 @@
  <footer class="site-footer">
  <div class="container">
  <div class="footer-grid">
- <div class="footer-brand"><a href="/index.html" class="logo"><img src="/assets/images/logo.PNG" alt="Polytronix" height="24"></a><p>Rugged displays and integrated electronics for aerospace, defense, and industrial systems.</p></div>
+ <div class="footer-brand"><a href="/index.html" class="logo"><img src="/assets/images/logo.PNG" alt="Polytronix" height="24" loading="lazy"></a><p>Rugged displays and integrated electronics for aerospace, defense, and industrial systems.</p></div>
  <nav class="footer-nav"><h4>Industries</h4><ul><li><a href="/industries/aerospace-defense.html">Aerospace &amp; Defense</a></li><li><a href="/industries/industrials.html">Industrials</a></li></ul></nav>
  <nav class="footer-nav footer-nav-wide">
 <h4>Capabilities</h4>
@@ -185,9 +184,10 @@
 11005 Ralston Rd., Arvada CO 80004</p>
 </div>
 </div>
- <div class="footer-bottom"><p class="footer-legal">&copy; 2025 Polytronix, Inc.</p><div class="footer-certs"><span class="text-sm">AS9100D • ISO 9001 • ITAR</span></div></div>
+ <div class="footer-bottom"><p class="footer-legal">&copy; 2025copy; <span id="year"></span> Polytronix, Inc.</p><div class="footer-certs"><span class="text-sm">AS9100D • ISO 9001 • ITAR</span></div></div>
  </div>
  </footer>
-<script src="/js/image-fallback.js"></script>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

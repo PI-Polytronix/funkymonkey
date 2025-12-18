@@ -4,13 +4,13 @@
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <title>Aerospace & Defense | Polytronix | Aerospace & Industrial Manufacturing</title>
- <meta name="description" content="AS9100D-certified displays, panels, and assemblies for cockpit, mission, and support equipment applications. ITAR registered with DO-160 alignment.">
+ <meta name="description" content="AS9100D-certified displays, panels, and assemblies for cockpit, mission, and support equipment applications. ITAR registered with MIL-STD-7788 alignment.">
  <link rel="canonical" href="https://www.polytronix.com/industries/aerospace-defense.html">
  <meta property="og:title" content="Aerospace & Defense | Polytronix | Aerospace & Industrial Manufacturing">
- <meta property="og:description" content="AS9100D-certified displays, panels, and assemblies for cockpit, mission, and support equipment applications. ITAR registered with DO-160 alignment.">
+ <meta property="og:description" content="AS9100D-certified displays, panels, and assemblies for cockpit, mission, and support equipment applications. ITAR registered with MIL-STD-7788 alignment.">
  <meta property="og:url" content="https://www.polytronix.com/industries/aerospace-defense.html">
  <meta property="og:type" content="website">
- <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+ <link rel="icon" type="image/svg+xml" sizes="32x32" href="/assets/favicons/favicon-32.svg">
  <link rel="stylesheet" href="/css/styles.css">
  <script type="application/ld+json">
  {
@@ -25,7 +25,7 @@
 <body>
  <header class="site-header">
  <div class="container header-inner">
- <a href="/index.html" class="logo"><img src="/assets/images/logo.PNG" alt="Polytronix" height="32"></a>
+ <a href="/index.html" class="logo"><img src="/assets/images/logo.PNG" alt="Polytronix Company Logo" height="32"></a>
  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
  <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu"><span></span><span></span><span></span></label>
  <nav class="site-nav" aria-label="Main navigation">
@@ -54,7 +54,7 @@
  <main>
  <!-- HERO: Two-Column Layout -->
  <section class="hero hero-two-col hero-with-banner">
- <div class="hero-banner-image" style="background-image: url('/assets/images/aerospace_placeholder.jpg');"></div>
+ <div class="hero-banner-image" style="background-image: url('/assets/images/aerospace_banner.jpg');" role="img" aria-label="Polytronix aerospace webpage banner, showing an airplane parket in a hangar."></div>
  <div class="container">
  <div class="hero-grid">
  <div class="hero-left">
@@ -189,7 +189,7 @@
  <article class="card card-industry">
  <a href="/capabilities/ruggedization.html">
  <h3>Ruggedization</h3>
- <p>DO-160, MIL-STD-810 alignment</p>
+ <p>MIL-STD-7788, MIL-STD-810 alignment</p>
  <span class="card-link">Learn more</span>
  </a>
  </article>
@@ -253,7 +253,7 @@
  <div class="container">
  <div class="footer-grid">
  <div class="footer-brand">
- <a href="/index.html" class="logo"><img src="/assets/images/logo.PNG" alt="Polytronix" height="24"></a>
+ <a href="/index.html" class="logo"><img src="/assets/images/logo.PNG" alt="Polytronix" height="24" loading="lazy"></a>
  <p>Rugged displays and integrated electronics for aerospace, defense, and industrial systems.</p>
  </div>
  <nav class="footer-nav">
@@ -306,11 +306,12 @@
 </div>
 </div>
  <div class="footer-bottom">
- <p class="footer-legal">&copy; 2025 Polytronix, Inc. All rights reserved.</p>
+ <p class="footer-legal">&copy; 2025copy; <span id="year"></span> Polytronix, Inc. All rights reserved.</p>
  <div class="footer-certs"><span class="text-sm">AS9100D • ISO 9001 • ITAR Registered</span></div>
  </div>
  </div>
  </footer>
-<script src="/js/image-fallback.js"></script>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

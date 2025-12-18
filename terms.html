@@ -6,7 +6,7 @@
  <title>Terms of Use | Polytronix | Aerospace & Industrial Manufacturing</title>
  <meta name="description" content="Terms of use for Polytronix website. Legal terms and conditions governing access to aerospace and industrial electronics manufacturing information.">
  <link rel="canonical" href="https://www.polytronix.com/terms.html">
- <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+ <link rel="icon" type="image/svg+xml" sizes="32x32" href="/assets/favicons/favicon-32.svg">
  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -39,7 +39,7 @@
  <footer class="site-footer">
  <div class="container">
  <div class="footer-grid">
- <div class="footer-brand"><a href="/index.html" class="logo"><img src="/assets/images/logo.PNG" alt="Polytronix" height="24"></a><p>Rugged displays and integrated electronics for aerospace, defense, and industrial systems.</p></div>
+ <div class="footer-brand"><a href="/index.html" class="logo"><img src="/assets/images/logo.PNG" alt="Polytronix" height="24" loading="lazy"></a><p>Rugged displays and integrated electronics for aerospace, defense, and industrial systems.</p></div>
  <nav class="footer-nav"><h4>Industries</h4><ul><li><a href="/industries/aerospace-defense.html">Aerospace &amp; Defense</a></li><li><a href="/industries/industrials.html">Industrials</a></li></ul></nav>
  <nav class="footer-nav footer-nav-wide">
 <h4>Capabilities</h4>
@@ -76,9 +76,9 @@
 11005 Ralston Rd., Arvada CO 80004</p>
 </div>
 </div>
- <div class="footer-bottom"><p class="footer-legal">&copy; 2025 Polytronix, Inc.</p><div class="footer-certs"><span class="text-sm">AS9100D • ISO 9001 • ITAR</span></div></div>
+ <div class="footer-bottom"><p class="footer-legal">&copy; <span id="year"></span> Polytronix, Inc. <a href="/privacy.html">Privacy</a> <a href="/terms.html">Terms</a></p><div class="footer-certs"><span class="text-sm">AS9100D &bull; ISO 9001 &bull; ITAR</span></div></div>
  </div>
  </footer>
-<script src="/js/image-fallback.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

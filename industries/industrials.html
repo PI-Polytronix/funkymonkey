@@ -10,7 +10,7 @@
  <meta property="og:description" content="Rugged HMIs, control panels, and electronic assemblies for transportation, energy, medical, and industrial equipment. AS9100D-certified facility.">
  <meta property="og:url" content="https://www.polytronix.com/industries/industrials.html">
  <meta property="og:type" content="website">
- <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+ <link rel="icon" type="image/svg+xml" sizes="32x32" href="/assets/favicons/favicon-32.svg">
  <link rel="stylesheet" href="/css/styles.css">
  <script type="application/ld+json">
  {
@@ -24,7 +24,7 @@
 <body>
  <header class="site-header">
  <div class="container header-inner">
- <a href="/index.html" class="logo"><img src="/assets/images/logo.PNG" alt="Polytronix" height="32"></a>
+ <a href="/index.html" class="logo"><img src="/assets/images/logo.PNG" alt="Polytronix Company Logo" height="32"></a>
  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
  <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu"><span></span><span></span><span></span></label>
  <nav class="site-nav" aria-label="Main navigation">
@@ -53,7 +53,7 @@
  <main>
  <!-- HERO: Two-Column Layout -->
  <section class="hero hero-two-col hero-with-banner">
- <div class="hero-banner-image" style="background-image: url('/assets/images/industrials_placeholder.jpg');"></div>
+ <div class="hero-banner-image" style="background-image: url('/assets/images/industrials_banner.jpg');" role="img" aria-label="Polytronix Industrials banner, showing an machine creating a part."></div>
  <div class="container">
  <div class="hero-grid">
  <div class="hero-left">
@@ -259,7 +259,7 @@
  <div class="container">
  <div class="footer-grid">
  <div class="footer-brand">
- <a href="/index.html" class="logo"><img src="/assets/images/logo.PNG" alt="Polytronix" height="24"></a>
+ <a href="/index.html" class="logo"><img src="/assets/images/logo.PNG" alt="Polytronix" height="24" loading="lazy"></a>
  <p>Rugged displays and integrated electronics for aerospace, defense, and industrial systems.</p>
  </div>
  <nav class="footer-nav">
@@ -312,11 +312,12 @@
 </div>
 </div>
  <div class="footer-bottom">
- <p class="footer-legal">&copy; 2025 Polytronix, Inc. All rights reserved.</p>
+ <p class="footer-legal">&copy; 2025copy; <span id="year"></span> Polytronix, Inc. All rights reserved.</p>
  <div class="footer-certs"><span class="text-sm">AS9100D • ISO 9001 • ITAR Registered</span></div>
  </div>
  </div>
  </footer>
-<script src="/js/image-fallback.js"></script>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

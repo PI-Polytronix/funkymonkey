@@ -28,5 +28,17 @@ The website is built using static HTML5 and CSS3, following a mobile-first respo
 - **Development Server:** A Python 3.11 HTTP server is used for local development, serving static files on port 5000 with no-cache headers for immediate reflection of changes.
 - **Redirects:** The `_redirects` file, in Netlify format, manages URL rewrites for legacy support, trailing slash normalization, and structural changes.
 
+## SEO & Security Files
+- **_redirects** - URL rewrites and 404 fallback (Netlify/Cloudflare format)
+- **_headers** - Security headers (X-Content-Type-Options, X-Frame-Options, Referrer-Policy, etc.)
+- **sitemap.xml** - Basic sitemap structure (ADD YOUR PAGES - marked with comments)
+- **robots.txt** - Crawler behavior rules with sitemap reference
+- **404.html** - Custom 404 error page
+
+## Performance Optimizations
+- Preload hints for critical CSS and images in index.html
+- Footer logo images use loading="lazy"
+- Cache headers configured in _headers file
+
 ## External Dependencies
-- **Netlify:** The `_redirects` file is formatted for Netlify, indicating potential or planned deployment through this service.
+- **Netlify/Cloudflare:** The `_redirects` and `_headers` files are formatted for Netlify/Cloudflare deployment.
