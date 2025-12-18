@@ -1,0 +1,15 @@
+# Polytronix Robots.txt
+# Strict crawler behavior
+
+User-agent: *
+Allow: /
+
+# Block access to internal/utility files
+Disallow: /_redirects
+Disallow: /_headers
+
+# Crawl delay to be respectful
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://www.polytronix.com/sitemap.xml
