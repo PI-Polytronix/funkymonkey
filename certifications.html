@@ -6,7 +6,7 @@
  <title>Certifications | Polytronix | Aerospace & Industrial Manufacturing</title>
  <meta name="description" content="AS9100D, ISO 9001:2015, ITAR registration, and FAA Part 145 repair station certifications for aerospace and defense manufacturing. Programs supported.">
  <link rel="canonical" href="https://www.polytronix.com/certifications.html">
- <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+ <link rel="icon" type="image/svg+xml" sizes="32x32" href="/assets/favicons/favicon-32.svg">
  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
@@ -41,8 +41,10 @@
  <section class="hero hero-compact hero-with-banner">
  <div class="hero-banner-image" style="background-image: url('/assets/images/certifications_banner.jpg');"></div>
  <div class="container">
+ <div class="hero-content">
  <h1>Quality Certifications</h1>
  <p>Documented quality systems supporting aerospace, defense, and industrial program requirements.</p>
+ </div>
  </div>
  </section>
 
@@ -174,7 +176,7 @@
  <footer class="site-footer">
  <div class="container">
  <div class="footer-grid">
- <div class="footer-brand"><a href="/index.html" class="logo"><img src="/assets/images/logo.PNG" alt="Polytronix" height="24"></a><p>Rugged displays and electronics for aerospace, defense, and industrial systems.</p></div>
+ <div class="footer-brand"><a href="/index.html" class="logo"><img src="/assets/images/logo.PNG" alt="Polytronix" height="24" loading="lazy"></a><p>Rugged displays and electronics for aerospace, defense, and industrial systems.</p></div>
  <nav class="footer-nav"><h4>Industries</h4><ul><li><a href="/industries/aerospace-defense.html">Aerospace &amp; Defense</a></li><li><a href="/industries/industrials.html">Industrials</a></li></ul></nav>
  <nav class="footer-nav footer-nav-wide">
 <h4>Capabilities</h4>
@@ -211,9 +213,10 @@
 11005 Ralston Rd., Arvada CO 80004</p>
 </div>
 </div>
- <div class="footer-bottom"><p class="footer-legal">&copy; 2025 Polytronix, Inc.</p><div class="footer-certs"><span class="text-sm">AS9100D &bull; ISO 9001 &bull; ITAR</span></div></div>
+ <div class="footer-bottom"><p class="footer-legal">&copy; 2025copy; <span id="year"></span> Polytronix, Inc.</p><div class="footer-certs"><span class="text-sm">AS9100D &bull; ISO 9001 &bull; ITAR</span></div></div>
  </div>
  </footer>
-<script src="/js/image-fallback.js"></script>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
