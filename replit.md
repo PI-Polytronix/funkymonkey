@@ -14,7 +14,7 @@ This project is a static HTML website for Polytronix, Inc., a company specializi
 The website is built using static HTML5 and CSS3, following a mobile-first responsive design approach. It utilizes a custom CSS design system (v2.0) defined with CSS variables for a consistent look and feel, incorporating Polytronix Blue, Electric Blue, and Electric Amber in its color palette, and Arial/Helvetica for typography.
 
 **Key Features:**
-- **Navigation:** Main navigation includes Home, Industries, Capabilities, Quality, About, and Contact.
+- **Navigation:** Main navigation includes Home, Industries, Capabilities, Quality, About (with Acquisitions dropdown), Careers, and Request Quote. About has a hover dropdown submenu containing Acquisitions.
 - **Content Structure:** Industry and capability sub-pages follow a consistent layout:
     1.  **Hero Section:** Features a banner image, title, use cases, CTA button, and an "At a Glance" table.
     2.  **Overview Section:** A descriptive paragraph immediately following the hero.
