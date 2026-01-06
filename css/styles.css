@@ -1242,6 +1242,38 @@ select {
   color: var(--ptx-amber-400);
 }
 
+.section-blue {
+  background: var(--ptx-blue-600);
+  color: var(--ptx-white);
+}
+
+.section-blue h2,
+.section-blue h3,
+.section-blue h4 {
+  color: var(--ptx-white);
+}
+
+.section-blue p,
+.section-blue em {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.section-blue .table-wrapper table {
+  background: var(--ptx-white);
+}
+
+.section-blue .table-wrapper th {
+  background: var(--ptx-blue-700);
+  color: var(--ptx-white);
+  border-color: var(--ptx-blue-800);
+}
+
+.section-blue .table-wrapper td {
+  background: var(--ptx-white);
+  color: var(--ptx-navy-700);
+  border-color: var(--ptx-slate-200);
+}
+
 /* Stat cards on navy background - better contrast */
 .section-navy .card-stat .stat-number {
   color: var(--ptx-amber-500);
