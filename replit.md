@@ -5,16 +5,31 @@ This project is a static HTML website for Polytronix, Inc., a company specializi
 
 ## User Preferences
 - Keep the existing HTML structure and CSS design system
-- Maintain static site approach (no build tools)
 - Preserve all existing page content and navigation
 - Hero sections keep blue gradient, images appear on right side
 - Section backgrounds use 70% transparency overlay
+
+## Build System
+The website uses a simple Python build system for centralized header/footer management:
+
+**Directory Structure:**
+- `templates/` - HTML templates with `{{HEADER}}` and `{{FOOTER}}` placeholders (edit these for page content)
+- `partials/` - Shared components (`header.html`, `footer.html`) - edit once, applies to all pages
+- Root `.html` files - Generated output (do not edit directly)
+
+**Workflow:**
+1. Edit templates in `templates/` folder for page-specific content
+2. Edit `partials/header.html` or `partials/footer.html` for site-wide navigation/footer changes
+3. Run `python build.py` to generate all HTML files
+4. The dev server runs build automatically on startup
+
+**Build Command:** `python build.py`
 
 ## System Architecture
 The website is built using static HTML5 and CSS3, following a mobile-first responsive design approach. It utilizes a custom CSS design system (v2.0) defined with CSS variables for a consistent look and feel, incorporating Polytronix Blue, Electric Blue, and Electric Amber in its color palette, and Arial/Helvetica for typography.
 
 **Key Features:**
-- **Navigation:** Main navigation includes Home, Industries, Capabilities, Quality, About (with Acquisitions dropdown), Careers, and Request Quote. About has a hover dropdown submenu containing Acquisitions.
+- **Navigation:** Main navigation includes Home, Industries, Capabilities, Quality, About (with dropdown containing About Us and Acquisitions), Careers, and Request Quote. On mobile, About toggles a submenu; on desktop, it shows a hover dropdown.
 - **Content Structure:** Industry and capability sub-pages follow a consistent layout:
     1.  **Hero Section:** Features a banner image, title, use cases, CTA button, and an "At a Glance" table.
     2.  **Overview Section:** A descriptive paragraph immediately following the hero.
