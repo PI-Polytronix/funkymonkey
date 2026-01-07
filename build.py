@@ -50,10 +50,41 @@ def find_templates():
                 templates.append(rel_path)
     return templates
 
-def process_template(template_content, partials):
+def get_nav_link_for_page(page_path):
+    """Determine which nav link should be active for a given page."""
+    if page_path == 'index.html':
+        return '/index.html'
+    elif page_path.startswith('industries'):
+        return '/industries.html'
+    elif page_path.startswith('capabilities'):
+        return '/capabilities.html'
+    elif page_path == 'certifications.html':
+        return '/certifications.html'
+    elif page_path == 'about.html' or page_path.startswith('about/'):
+        return '/about.html'
+    elif page_path == 'careers.html':
+        return '/careers.html'
+    elif page_path == 'contact.html':
+        return '/contact.html'
+    return None
+
+def process_template(template_content, partials, page_path):
     """Replace partial placeholders with actual content."""
     result = template_content
-    result = result.replace('{{HEADER}}', partials.get('header', ''))
+    
+    header = partials.get('header', '')
+    active_link = get_nav_link_for_page(page_path)
+    if active_link:
+        header = header.replace(
+            f'<a href="{active_link}">', 
+            f'<a href="{active_link}" aria-current="page">'
+        )
+        header = header.replace(
+            f'<a href="{active_link}" class="nav-item-toggle">', 
+            f'<a href="{active_link}" class="nav-item-toggle" aria-current="page">'
+        )
+    
+    result = result.replace('{{HEADER}}', header)
     result = result.replace('{{FOOTER}}', partials.get('footer', ''))
     return result
 
@@ -72,7 +103,7 @@ def build():
         output_full = os.path.join(OUTPUT_DIR, template_path)
         
         template_content = read_file(template_full)
-        final_content = process_template(template_content, partials)
+        final_content = process_template(template_content, partials, template_path)
         
         write_file(output_full, final_content)
         print(f"  Built: {template_path}")
