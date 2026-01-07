@@ -1771,10 +1771,31 @@ select {
   /* Mobile submenu */
   .nav-item {
     display: block;
+    width: 100%;
+  }
+
+  .nav-item > a {
+    display: block;
+    width: 100%;
+    padding: var(--space-4);
+    border-bottom: var(--border-light);
+    font-size: var(--text-body);
+    color: var(--ptx-navy-700);
+    font-weight: var(--weight-medium);
+  }
+
+  .nav-item > a:hover {
+    color: var(--ptx-blue-500);
+  }
+
+  .nav-item > a[aria-current="page"] {
+    color: var(--ptx-blue-500);
   }
 
   .nav-item > a::after {
-    display: none;
+    display: inline-block;
+    margin-left: 6px;
+    vertical-align: middle;
   }
 
   .nav-submenu {
