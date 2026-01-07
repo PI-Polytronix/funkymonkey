@@ -534,6 +534,17 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  color: var(--ptx-navy-700);
+  font-size: 15px;
+  font-weight: var(--weight-bold);
+}
+
+.nav-item > a:hover {
+  color: var(--ptx-blue-500);
+}
+
+.nav-item > a[aria-current="page"] {
+  color: var(--ptx-blue-500);
 }
 
 .nav-item > a::after {
@@ -1781,7 +1792,7 @@ select {
     border-bottom: var(--border-light);
     font-size: var(--text-body);
     color: var(--ptx-navy-700);
-    font-weight: var(--weight-medium);
+    font-weight: var(--weight-bold);
     cursor: pointer;
   }
 
