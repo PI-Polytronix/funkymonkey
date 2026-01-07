@@ -23,8 +23,9 @@
  <a href="/capabilities.html">Capabilities</a>
  <a href="/certifications.html">Quality</a>
  <div class="nav-item">
-<a href="/about.html">About</a>
+<a href="/about.html" class="nav-item-toggle">About</a>
 <div class="nav-submenu">
+<a href="/about.html">About Us</a>
 <a href="/about/acquisitions.html">Acquisitions</a>
 </div>
 </div>
@@ -194,6 +195,18 @@
  </div>
  </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Mobile nav submenu toggle
+document.querySelectorAll('.nav-item-toggle').forEach(function(toggle) {
+  toggle.addEventListener('click', function(e) {
+    if (window.innerWidth < 768) {
+      e.preventDefault();
+      this.parentElement.classList.toggle('open');
+    }
+  });
+});
+</script>
 </body>
 </html>
