@@ -4,12 +4,12 @@
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
  
- <title>Contact | Polytronix | Aerospace & Industrial Manufacturing</title>
- <meta name="description" content="Contact Polytronix for rugged display and electronics manufacturing quotes. AS9100D-certified manufacturing facilities in Richardson, Texas.">
+ <title>Contact | Polytronix | Highly Engineered Components Manufacturing and Sub-Assembly</title>
+ <meta name="description" content="Contact Polytronix for high mix to high volume manufacturing and sub-assembly specialized in highly engineered components for the aerospace & defense, medical, and industrial industries.">
  <link rel="canonical" href="https://www.polytronix.com/contact.html">
  
  <meta property="og:title" content="Contact | Polytronix | Aerospace & Industrial Manufacturing">
- <meta property="og:description" content="Contact Polytronix for rugged display and electronics manufacturing quotes. AS9100D-certified manufacturing facilities in Richardson, Texas.">
+ <meta property="og:description" content="Contact Polytronix for high mix to high volume manufacturing and sub-assembly specialized in highly engineered components for the aerospace & defense, medical, and industrial industries.">
  <meta property="og:url" content="https://www.polytronix.com/contact.html">
  <meta property="og:type" content="website">
  
@@ -41,9 +41,14 @@
  
  <nav class="site-nav">
  <a href="/index.html">Home</a>
+ <div class="nav-item">
  <a href="/industries.html">Industries</a>
- <a href="/capabilities.html">Capabilities</a>
- <a href="/certifications.html">Quality</a>
+ <div class="nav-submenu">
+ <a href="/industries/aerospace-defense.html">Aerospace &amp; Defense</a>
+ <a href="/industries/medical-industrial.html">Medical and Industrial</a>
+</div>
+</div> <a href="/capabilities.html">Capabilities</a>
+ <a href="/quality.html">Quality</a>
  <div class="nav-item">
 <a href="/about.html" class="nav-item-toggle">About</a>
 <div class="nav-submenu">
@@ -81,6 +86,38 @@
  </div>
  </section>
 
+ <!-- TRUST INDICATORS -->
+ <section class="section-white py-6">
+ <div class="container">
+ <div class="stats-row">
+ <div class="stat-item">
+ <div class="number">1981</div>
+ <div class="label">Founded</div>
+ </div>
+ <div class="stat-item">
+ <div class="number">45+</div>
+ <div class="label">Years</div>
+ </div>
+ <div class="stat-item">
+ <div class="number">200+</div>
+ <div class="label">Employees</div>
+ </div>
+ <div class="stat-item">
+ <div class="number">300,000+</div>
+ <div class="label">SqFt Capacity</div>
+ </div>
+ <div class="stat-item">
+ <div class="number">3</div>
+ <div class="label">US Facilities</div>
+ </div>
+ <div class="stat-item">
+ <div class="number">2</div>
+ <div class="label">Int'l Facilities</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
  <!-- CONTACT FORM + INFO -->
  <section class="section section-white">
  <div class="container">
@@ -89,67 +126,44 @@
  <div>
  <h2>Send a Message</h2>
  
- <!-- CONTACT FORM -->
- <!-- Note: Configure form action for your backend (Formspree, Netlify Forms, etc.) -->
- <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
- 
+ <!-- CONTACT FORM (mirrors current live site fields) -->
+ <form enctype="multipart/form-data" method="post" action="http://www.freedback.com/mail.php" accept-charset="UTF-8">
+ <input type="hidden" name="acctid" id="acctid" value="7gn9adaux90z7n19">
+ <input type="hidden" name="formid" id="formid" value="1280377">
+ <input type="hidden" name="required_vars" id="required_vars" value="name,field-55a0d7805c22acb,email">
+
  <div class="form-group">
  <label for="name" class="required">Name</label>
  <input type="text" id="name" name="name" required autocomplete="name">
  </div>
- 
+
  <div class="form-group">
- <label for="company" class="required">Company</label>
- <input type="text" id="company" name="company" required autocomplete="organization">
+ <label for="field-6a9215b829e02c9">Company</label>
+ <input type="text" id="field-6a9215b829e02c9" name="field-6a9215b829e02c9" autocomplete="organization">
  </div>
- 
+
  <div class="form-group">
- <label for="email" class="required">Email</label>
+ <label for="field-55a0d7805c22acb" class="required">Phone</label>
+ <input type="tel" id="field-55a0d7805c22acb" name="field-55a0d7805c22acb" required autocomplete="tel">
+ </div>
+
+ <div class="form-group">
+ <label for="email" class="required">Email Address</label>
  <input type="email" id="email" name="email" required autocomplete="email">
  </div>
- 
+
  <div class="form-group">
- <label for="phone">Phone</label>
- <input type="tel" id="phone" name="phone" autocomplete="tel">
+ <label for="field-281dfe787e9d17d">Upload Files (max size 2 MB)</label>
+ <input type="file" id="field-281dfe787e9d17d" name="field-281dfe787e9d17d">
  </div>
- 
+
  <div class="form-group">
- <label for="industry">Industry</label>
- <select id="industry" name="industry">
- <option value="">Select an industry</option>
- <option value="aerospace-defense">Aerospace &amp; Defense</option>
- <option value="commercial-aviation">Commercial Aviation</option>
- <option value="military">Military Programs</option>
- <option value="simulation">Simulation &amp; Training</option>
- <option value="medical">Medical / Life Sciences</option>
- <option value="industrial">Industrial Equipment</option>
- <option value="transportation">Transportation</option>
- <option value="other">Other</option>
- </select>
+ <label for="field-0d2534591b75db9">Message</label>
+ <textarea id="field-0d2534591b75db9" name="field-0d2534591b75db9" rows="6"></textarea>
  </div>
- 
- <div class="form-group">
- <label for="message" class="required">Message</label>
- <textarea id="message" name="message" rows="6" required placeholder="Describe your requirements, program timeline, or questions."></textarea>
- </div>
- 
- <!-- Honeypot for spam -->
- <input type="text" name="_gotcha" style="display:none">
- 
- <!-- Hidden fields -->
- <input type="hidden" name="_subject" value="New contact from polytronix.com">
- 
- <button type="submit" class="btn btn-primary">Send Message</button>
+
+ <button type="submit" class="btn btn-primary">Submit Form</button>
  </form>
- 
- <!-- Form messages -->
- <div id="form-success" class="mt-5" style="display:none;">
- <p><strong>Thank you.</strong> We'll respond within one business day.</p>
- </div>
- 
- <div id="form-error" class="mt-5" style="display:none;">
- <p><strong>Something went wrong.</strong> Please try again or email us directly at <a href="mailto:sales@polytronix.com">sales@polytronix.com</a>.</p>
- </div>
  </div>
  
  <!-- CONTACT INFO -->
@@ -204,128 +218,116 @@
  </section>
  </main>
 
- <!-- FOOTER -->
+ <!-- BLOCK 4: CERTIFICATIONS -->
+ <section class="section section-navy">
+ <div class="container">
+ <div class="section-header">
+ <h2>Quality &amp; Compliance</h2>
+ </div>
+ 
+ <div class="card-grid card-grid-4">
+ <div class="card-stat">
+ <div class="stat-number">AS9100D</div>
+ </div>
+ <div class="card-stat">
+ <div class="stat-number">ISO 9001</div>
+ </div>
+ <div class="card-stat">
+ <div class="stat-number">ISO 13485</div>
+ </div>
+ <div class="card-stat">
+ <div class="stat-number">ISO 14001</div>
+ </div>
+ <div class="card-stat">
+ <div class="stat-number">IATF 16949</div>
+ </div>
+ <div class="card-stat">
+ <div class="stat-number">ITAR</div>
+ </div>
+ <div class="card-stat">
+ <div class="stat-number">FAA 145</div>
+ </div>
+ <div class="card-stat">
+ <div class="stat-number">EASA Part 145 </div>
+ </div>
+ </div>
+ 
+ <p class="text-center mt-6">
+ <a href="/quality.html" class="btn btn-white">View Certifications</a>
+ </p>
+ </div>
+ </section>
+
+  <!-- FOOTER -->
  <footer class="site-footer">
  <div class="container">
  <div class="footer-grid">
  <div class="footer-brand">
- <a href="/index.html" class="logo"><img src="/assets/images/logo.PNG" alt="Polytronix" height="24" loading="lazy"></a>
- <p>Rugged displays and integrated electronics for aerospace, defense, and industrial systems.</p>
+ <a href="/index.html" class="logo">
+ <img src="/assets/images/logo.PNG" alt="Polytronix" height="24" loading="lazy">
+ </a>
+ <p>High mix to high volume manufacturing and sub-assembly specialized in highly engineered components for the aerospace & defense, medical, and industrial industries</p>
  </div>
+ 
  <nav class="footer-nav">
  <h4>Industries</h4>
  <ul>
  <li><a href="/industries/aerospace-defense.html">Aerospace &amp; Defense</a></li>
- <li><a href="/industries/industrials.html">Medical and Industrials</a></li>
+ <li><a href="/industries/medical-industrial.html">Medical and Industrial</a></li>
  </ul>
  </nav>
+ 
  <nav class="footer-nav footer-nav-wide">
 <h4>Capabilities</h4>
 <ul>
-<li><a href="/capabilities/displays.html">Displays</a></li>
-<li><a href="/capabilities/optical-bonding.html">Optical Bonding</a></li>
-<li><a href="/capabilities/touch-integration.html">Touch Integration</a></li>
-<li><a href="/capabilities/ruggedization.html">Ruggedization</a></li>
-<li><a href="/capabilities/nvis-solutions.html">NVIS Solutions</a></li>
+<li><a href="/capabilities/box-builds.html">Box Builds</a></li>
+<li><a href="/capabilities/electro-mechanical-assemblies.html">Electromechanical Assemblies</a></li>
+<li><a href="/capabilities/displays.html">Digital Displays</a></li>
 <li><a href="/capabilities/instrument-panels.html">Instrument Panels</a></li>
 <li><a href="/capabilities/instrument-lighting.html">Instrument Lighting</a></li>
 <li><a href="/capabilities/cable-wire-harnesses.html">Cable &amp; Wire Harnesses</a></li>
-<li><a href="/capabilities/harness-design.html">Harness Design</a></li>
-<li><a href="/capabilities/electro-mechanical-assemblies.html">Electro-Mechanical</a></li>
-<li><a href="/capabilities/box-builds.html">Box Builds</a></li>
 <li><a href="/capabilities/pcb-assembly.html">PCB Assembly</a></li>
 <li><a href="/capabilities/machining.html">Machining</a></li>
 <li><a href="/capabilities/custom-engineering.html">Custom Engineering</a></li>
-<li><a href="/capabilities/repair-station.html">Repair Station</a></li>
+<li><a href="/capabilities/repair-station.html">Repair Services</a></li>
 </ul>
 </nav>
+ 
  <nav class="footer-nav">
-<h4>Company</h4>
-<ul>
-<li><a href="/about.html">About</a></li>
-<li><a href="/about/acquisitions.html">Acquisitions</a></li>
-<li><a href="/careers.html">Careers</a></li>
- <li><a href="/certifications.html">Certifications</a></li>
+ <h4>Company</h4>
+ <ul>
+ <li><a href="/about.html">About</a></li>
+ <li><a href="/careers.html">Careers</a></li>
+ <li><a href="/quality.html">Quality</a></li>
  <li><a href="/contact.html">Contact</a></li>
  </ul>
  </nav>
+ 
  <div class="footer-contact">
-<h4>Contact</h4>
-<p><strong>Phone:</strong> <a href="tel:+19722387045">(972) 238-7045</a><br>
+ <h4>Contact</h4>
+ <p><strong>Polytronix, Inc.</strong>
+ <p>Richardson, TX (HQ)<br>
+ 701 N Plano Rd., Richardson TX 75081</p>
+ <p><strong>Phone:</strong> <a href="tel:+19722387045">(972) 238-7045</a><br>
 <strong>Fax:</strong> (972) 644-0805<br>
 <a href="mailto:sales@polytronix.com">sales@polytronix.com</a><br>
 <a href="mailto:engineering@polytronix.com">engineering@polytronix.com</a></p>
-<p>Richardson, TX (HQ)<br>
-701 N Plano Rd., Richardson TX 75081</p>
-</div>
-</div>
+ </div>
+ </div>
+ 
  <div class="footer-bottom">
- <p class="footer-legal">&copy; <span id="year"></span> Polytronix, Inc. <a href="privacy.html">Privacy</a> <a href="terms.html">Terms</a></p>
- <div class="footer-certs"><span class="text-sm">AS9100D &bull; ISO 9001 &bull; ITAR</span></div>
+ <p class="footer-legal">
+ &copy; <span id="year"></span> Polytronix, Inc.
+ <a href="privacy.html">Privacy</a>
+ <a href="terms.html">Terms</a>
+ </p>
+ <div class="footer-certs">
+ <span class="text-sm">AS9100D &bull; ISO 9001 &bull; ISO 13485 &bull; ISO 14001 &bull; IATF 16949 &bull; ITAR &bull; FAA 145 &bull; EASA Part 145</span>
+ </div>
  </div>
  </div>
  </footer>
 
- <!-- FORM HANDLING SCRIPT -->
- <script>
- (function() {
- const form = document.getElementById('contact-form');
- const successMsg = document.getElementById('form-success');
- const errorMsg = document.getElementById('form-error');
- 
- if (!form) return;
- 
- form.addEventListener('submit', function(e) {
- e.preventDefault();
- 
- // Basic validation
- const name = document.getElementById('name').value.trim();
- const email = document.getElementById('email').value.trim();
- const message = document.getElementById('message').value.trim();
- 
- if (!name || !email || !message) {
- alert('Please fill in all required fields.');
- return;
- }
- 
- // Email validation
- const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
- if (!emailRegex.test(email)) {
- alert('Please enter a valid email address.');
- return;
- }
- 
- // Submit form
- const formData = new FormData(form);
- const submitBtn = form.querySelector('button[type="submit"]');
- submitBtn.disabled = true;
- submitBtn.textContent = 'Sending...';
- 
- fetch(form.action, {
- method: 'POST',
- body: formData,
- headers: {
- 'Accept': 'application/json'
- }
- })
- .then(response => {
- if (response.ok) {
- form.style.display = 'none';
- successMsg.style.display = 'block';
- errorMsg.style.display = 'none';
- } else {
- throw new Error('Form submission failed');
- }
- })
- .catch(error => {
- console.error('Error:', error);
- errorMsg.style.display = 'block';
- submitBtn.disabled = false;
- submitBtn.textContent = 'Send Message';
- });
- });
- })();
- </script>
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();

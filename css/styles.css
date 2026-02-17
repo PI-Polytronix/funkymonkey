@@ -767,9 +767,10 @@ p {
   opacity: 0.85;
   pointer-events: none;
 }
-/* Reserve space for the banner so text cannot overlap it */
+/* Reserve space for the banner so hero text never overlaps the image */
 .hero-with-banner .hero-content {
-  max-width: 85%;
+  max-width: 52%;
+  padding-right: var(--space-5);
 }
 /* Striped overlay to blend the banner image with the left side (bars style) */
 .hero-banner-image::before {
@@ -801,12 +802,21 @@ p {
     width: 40%;
     opacity: 0.7;
   }
+
+  .hero-with-banner .hero-content {
+    max-width: 58%;
+  }
 }
 
 /* Responsive: On mobile, hide the banner image to keep text readable */
 @media (max-width: 767px) {
   .hero-banner-image {
     display: none;
+  }
+
+  .hero-with-banner .hero-content {
+    max-width: 100%;
+    padding-right: 0;
   }
 }
 
