@@ -74,7 +74,9 @@
 
   Promise.all([
     loadPartial("site-header", "/partials/header.html"),
-    loadPartial("site-footer", "/partials/footer.html")
+    loadPartial("site-footer", "/partials/footer.html"),
+    loadPartial("compliance-strip", "/partials/compliance-strip.html"),
+    loadPartial("trust-indicators", "/partials/trust-indicators.html")
   ])
     .then(function () {
       setActiveNav();

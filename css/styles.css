@@ -1319,6 +1319,49 @@ select {
   color: var(--ptx-white);
 }
 
+/* Compact badge strip variant for recurring Quality & Compliance block */
+.compliance-strip {
+  background: #2c3f58;
+  padding: var(--space-5) 0;
+}
+
+.compliance-strip .section-header {
+  margin-bottom: var(--space-4);
+}
+
+.compliance-strip .section-header h2 {
+  font-size: 1.75rem;
+}
+
+.compliance-strip .card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.compliance-strip .card-grid.card-grid-4 {
+  grid-template-columns: none;
+}
+
+.compliance-strip .card-stat {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  padding: 8px 14px;
+  min-height: 0;
+}
+
+.compliance-strip .card-stat .stat-number {
+  color: var(--ptx-white);
+  font-size: var(--text-body-sm);
+  margin: 0;
+}
+
+.compliance-strip .text-center.mt-6 {
+  margin-top: var(--space-4);
+}
+
 /* Section Headers */
 .section-header {
   text-align: center;
@@ -1810,7 +1853,7 @@ select {
     width: 100%;
   }
 
-  .nav-item > a.nav-item-toggle {
+  .nav-item > a {
     display: block;
     width: 100%;
     padding: var(--space-4);
@@ -1818,6 +1861,11 @@ select {
     font-size: var(--text-body);
     color: var(--ptx-navy-700);
     font-weight: var(--weight-bold);
+  }
+
+  .nav-item > a.nav-item-toggle {
+    display: block;
+    width: 100%;
     cursor: pointer;
   }
 
