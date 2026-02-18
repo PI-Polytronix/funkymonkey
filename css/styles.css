@@ -744,9 +744,11 @@ p {
 
 /* Hero with custom banner image (replaces the circuit pattern on the right) */
 .hero-with-banner {
+  --hero-banner-width: 46%;
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
+  min-height: 420px;
 }
 
 /* Adjust the ::after pseudo-element to not show circuit pattern when banner is present */
@@ -760,17 +762,23 @@ p {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 50%;
+  width: var(--hero-banner-width);
   background-size: cover;
   background-position: center;
   z-index: 2;
   opacity: 0.85;
   pointer-events: none;
 }
-/* Reserve space for the banner so hero text never overlaps the image */
+
+/* Reserve space for banner area so all hero copy/CTAs stay in the text column */
+.hero-with-banner .container {
+  padding-right: calc(var(--hero-banner-width) + var(--space-4));
+}
+
+/* Allow normal content width inside the reserved text column */
 .hero-with-banner .hero-content {
-  max-width: 52%;
-  padding-right: var(--space-5);
+  max-width: none;
+  padding-right: 0;
 }
 /* Striped overlay to blend the banner image with the left side (bars style) */
 .hero-banner-image::before {
@@ -798,13 +806,17 @@ p {
 
 /* Responsive: On tablets, make banner narrower */
 @media (max-width: 1023px) {
+  .hero-with-banner {
+    --hero-banner-width: 40%;
+    min-height: 380px;
+  }
+
   .hero-banner-image {
-    width: 40%;
     opacity: 0.7;
   }
 
-  .hero-with-banner .hero-content {
-    max-width: 58%;
+  .hero-with-banner .container {
+    padding-right: calc(var(--hero-banner-width) + var(--space-3));
   }
 }
 
@@ -814,9 +826,12 @@ p {
     display: none;
   }
 
-  .hero-with-banner .hero-content {
-    max-width: 100%;
-    padding-right: 0;
+  .hero-with-banner {
+    min-height: auto;
+  }
+
+  .hero-with-banner .container {
+    padding-right: var(--gutter-mobile);
   }
 }
 

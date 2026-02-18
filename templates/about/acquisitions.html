@@ -30,34 +30,7 @@
 </head>
 
 <body>
- <header class="site-header">
- <div class="container header-inner">
- <a href="/index.html" class="logo">
- <img src="/assets/images/logo.PNG" alt="Polytronix" height="32">
- </a>
-
- <input type="checkbox" id="nav-toggle" class="nav-toggle">
- <label for="nav-toggle" class="nav-toggle-label">
- <span></span><span></span><span></span>
- </label>
-
- <nav class="site-nav">
- <a href="/index.html">Home</a>
- <a href="/industries.html">Industries</a>
- <a href="/capabilities.html">Capabilities</a>
- <a href="/certifications.html">Quality</a>
- <div class="nav-item">
-<a href="/about.html" class="nav-item-toggle" aria-current="page">About</a>
-<div class="nav-submenu">
-<a href="/about.html" aria-current="page">About Us</a>
-<a href="/about/acquisitions.html" aria-current="page">Acquisitions</a>
-</div>
-</div>
- <a href="/careers.html">Careers</a>
- <a href="/contact.html" class="btn btn-primary btn-sm">Request Quote</a>
- </nav>
- </div>
- </header>
+ <div id="site-header"></div>
 
  <div class="breadcrumbs-bar">
  <div class="container">
@@ -153,78 +126,8 @@
  </section>
  </main>
 
- <footer class="site-footer">
- <div class="container">
- <div class="footer-grid">
- <div class="footer-brand">
- <a href="/index.html" class="logo"><img src="/assets/images/logo.PNG" alt="Polytronix" height="24" loading="lazy"></a>
- <p>Rugged displays and integrated electronics for aerospace, defense, and industrial systems.</p>
- </div>
- <nav class="footer-nav">
- <h4>Industries</h4>
- <ul>
- <li><a href="/industries/aerospace-defense.html">Aerospace &amp; Defense</a></li>
- <li><a href="/industries/industrials.html">Medical and Industrials</a></li>
- </ul>
- </nav>
- <nav class="footer-nav footer-nav-wide">
-<h4>Capabilities</h4>
-<ul>
-<li><a href="/capabilities/displays.html">Displays</a></li>
-<li><a href="/capabilities/optical-bonding.html">Optical Bonding</a></li>
-<li><a href="/capabilities/touch-integration.html">Touch Integration</a></li>
-<li><a href="/capabilities/ruggedization.html">Ruggedization</a></li>
-<li><a href="/capabilities/nvis-solutions.html">NVIS Solutions</a></li>
-<li><a href="/capabilities/instrument-panels.html">Instrument Panels</a></li>
-<li><a href="/capabilities/instrument-lighting.html">Instrument Lighting</a></li>
-<li><a href="/capabilities/cable-wire-harnesses.html">Cable &amp; Wire Harnesses</a></li>
-<li><a href="/capabilities/harness-design.html">Harness Design</a></li>
-<li><a href="/capabilities/electro-mechanical-assemblies.html">Electro-Mechanical</a></li>
-<li><a href="/capabilities/box-builds.html">Box Builds</a></li>
-<li><a href="/capabilities/pcb-assembly.html">PCB Assembly</a></li>
-<li><a href="/capabilities/machining.html">Machining</a></li>
-<li><a href="/capabilities/custom-engineering.html">Custom Engineering</a></li>
-<li><a href="/capabilities/repair-station.html">Repair Station</a></li>
-</ul>
-</nav>
- <nav class="footer-nav">
- <h4>Company</h4>
- <ul>
- <li><a href="/about.html">About</a></li>
- <li><a href="/about/acquisitions.html">Acquisitions</a></li>
- <li><a href="/careers.html">Careers</a></li>
- <li><a href="/certifications.html">Certifications</a></li>
- <li><a href="/contact.html">Contact</a></li>
- </ul>
- </nav>
- <div class="footer-contact">
-<h4>Contact</h4>
-<p><strong>Phone:</strong> <a href="tel:+19722387045">(972) 238-7045</a><br>
-<strong>Fax:</strong> (972) 644-0805<br>
-<a href="mailto:sales@polytronix.com">sales@polytronix.com</a><br>
-<a href="mailto:engineering@polytronix.com">engineering@polytronix.com</a></p>
-<p>Richardson, TX (HQ)<br>
-701 N Plano Rd., Richardson TX 75081</p>
-</div>
-</div>
- <div class="footer-bottom">
- <p class="footer-legal">&copy; <span id="year"></span> Polytronix, Inc. <a href="/privacy.html">Privacy</a> <a href="/terms.html">Terms</a></p>
- <div class="footer-certs"><span class="text-sm">AS9100D &bull; ISO 9001 &bull; ITAR</span></div>
- </div>
- </div>
- </footer>
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
+ <div id="site-footer"></div>
 
-// Mobile nav submenu toggle
-document.querySelectorAll('.nav-item-toggle').forEach(function(toggle) {
-  toggle.addEventListener('click', function(e) {
-    if (window.innerWidth < 768) {
-      e.preventDefault();
-      this.parentElement.classList.toggle('open');
-    }
-  });
-});
-</script>
+<script defer src="/js/includes.js"></script>
 </body>
 </html>
