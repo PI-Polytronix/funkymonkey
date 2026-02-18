@@ -38,12 +38,23 @@
   }
 
   function initMobileSubmenuToggle() {
-    var toggles = document.querySelectorAll(".nav-item-toggle");
+    var toggles = document.querySelectorAll(".site-nav .nav-item > a");
     toggles.forEach(function (toggle) {
+      var submenu = toggle.nextElementSibling;
+      if (!submenu || !submenu.classList.contains("nav-submenu")) return;
+
       toggle.addEventListener("click", function (e) {
         if (window.innerWidth < 768) {
-          e.preventDefault();
-          this.parentElement.classList.toggle("open");
+          var parent = this.parentElement;
+          var alreadyOpen = parent.classList.contains("open");
+
+          if (!alreadyOpen) {
+            e.preventDefault();
+            document.querySelectorAll(".site-nav .nav-item.open").forEach(function (item) {
+              if (item !== parent) item.classList.remove("open");
+            });
+            parent.classList.add("open");
+          }
         }
       });
     });

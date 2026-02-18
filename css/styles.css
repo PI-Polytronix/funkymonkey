@@ -770,6 +770,31 @@ p {
   pointer-events: none;
 }
 
+/* Placeholder variant for hero banners awaiting approved images */
+.hero-banner-image.hero-banner-placeholder {
+  background: linear-gradient(135deg, var(--ptx-slate-100) 0%, var(--ptx-slate-200) 100%);
+}
+
+.hero-banner-image.hero-banner-placeholder::before {
+  display: none;
+}
+
+.hero-banner-image.hero-banner-placeholder::after {
+  content: "Image Placeholder";
+  position: absolute;
+  inset: var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--ptx-slate-400);
+  border-radius: var(--radius-sm);
+  color: var(--ptx-slate-600);
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
 /* Reserve space for banner area so all hero copy/CTAs stay in the text column */
 .hero-with-banner .container {
   padding-right: calc(var(--hero-banner-width) + var(--space-4));
@@ -1515,6 +1540,15 @@ select {
   font-size: var(--text-body-sm);
 }
 
+/* Uniform footer body typography (keep section titles separate) */
+.site-footer p,
+.site-footer li,
+.site-footer a,
+.site-footer .text-sm {
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-normal);
+}
+
 .footer-nav h4 {
   color: var(--ptx-white);
   font-size: var(--text-body-sm);
@@ -1560,7 +1594,7 @@ select {
 }
 
 .footer-nav-wide a {
-  font-size: var(--text-body-xs);
+  font-size: var(--text-body-sm);
 }
 
 .footer-contact h4 {
@@ -1885,6 +1919,10 @@ select {
   }
 
   .nav-item.open > a.nav-item-toggle::after {
+    transform: rotate(180deg);
+  }
+
+  .nav-item.open > a::after {
     transform: rotate(180deg);
   }
 
