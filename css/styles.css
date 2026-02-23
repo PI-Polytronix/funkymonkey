@@ -32,17 +32,26 @@
   --ptx-blue-500: #1c3b84;
   /* Primary brand */
   
-  --ptx-blue-400: #0c34cd;
+  --ptx-blue-400: #193395;
   /* Light Electric - Hover states */
   
   --ptx-blue-300: #DADBDD;
   /* Disabled/muted */
   
-  --ptx-navy-700: #223651;
+  --ptx-navy-700: #2c3f58;
   /* Dark backgrounds */
   
-  --ptx-navy-600: #223651;
+  --ptx-navy-600: #143055;
   /* Secondary darks */
+  --ptx-navy-800: #223651;
+  /* Compliance strip / dark accent */
+
+  --ptx-blue-700: #193779;
+  /* CTA band (cobalt) */
+
+  /* Text on dark backgrounds (hero, CTA, compliance) */
+  --ptx-on-dark: #E6E8EB;
+  --ptx-on-dark-muted: #D3D8DF;
 
   /* Accent Colors */
   --ptx-amber-500: #ECCC2C;
@@ -55,7 +64,7 @@
   /* Neutral System */
   --ptx-slate-700: #374C6E;
   /* Muted Indigo - Dark text alt */
-  --ptx-slate-600: #5C6778;
+  --ptx-slate-600: #313741;
   /* Slate Grey - Secondary text */
   --ptx-slate-500: #6E7C8E;
   /* Cool Grey - Tertiary text */
@@ -122,8 +131,8 @@
   --container-md: 960px;
   --container-lg: 1200px;
   --container-xl: 1400px;
-  --gutter: 32px;
-  --gutter-tablet: 24px;
+  --gutter: 48px;
+  --gutter-tablet: 32px;
   --gutter-mobile: 16px;
 
   /* Borders & Radius */
@@ -164,6 +173,8 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /* Fill viewport outside capped body on wide PC screens */
+  background-color: var(--ptx-slate-100);
 }
 
 body {
@@ -385,13 +396,21 @@ p {
    5. HEADER & NAVIGATION
    ========================================================================== */
 
+/* Sticky header: first child of body so it stays visible on scroll */
 .site-header {
   position: sticky;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: var(--z-header);
   background: var(--ptx-white);
   border-bottom: var(--border-light);
   height: 72px;
+}
+
+/* Header uses full width with gutter so logo sits left, CTAs right */
+.site-header .container {
+  max-width: none;
 }
 
 .header-inner {
@@ -1263,6 +1282,15 @@ select {
   padding: var(--space-8) 0;
 }
 
+/*
+ * Root cause: global p { max-width: 75ch } (typography) limits all paragraphs.
+ * So section > container > p stays narrow; content in cards fills the card column.
+ * Allow section-level text (direct container children) to use full container width.
+ */
+.section .container > p {
+  max-width: none;
+}
+
 .section-sm {
   padding: var(--space-7) 0;
 }
@@ -1331,7 +1359,7 @@ select {
 
 .section-blue .table-wrapper td {
   background: var(--ptx-white);
-  color: var(--ptx-navy-700);
+  color: var(--ptx-navy-800);
   border-color: var(--ptx-slate-200);
 }
 
@@ -1346,8 +1374,8 @@ select {
 
 /* Compact badge strip variant for recurring Quality & Compliance block */
 .compliance-strip {
-  background: #2c3f58;
-  padding: var(--space-5) 0;
+  background: var(--ptx-navy-800);
+  padding: var(--space-4) 0;
 }
 
 .compliance-strip .section-header {
@@ -1406,7 +1434,7 @@ select {
 .cta-band {
   background: var(--ptx-blue-500);
   color: var(--ptx-white);
-  padding: var(--space-8) 0;
+  padding: var(--space-4) 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -1513,14 +1541,14 @@ select {
    12. FOOTER
    ========================================================================== */
 .site-footer {
-  background: var(--ptx-navy-700);
+  background: var(--ptx-blue-400);
   color: var(--ptx-white);
-  padding: var(--space-8) 0 var(--space-6);
+  padding: var(--space-5) 0 var(--space-6);
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 2fr 1fr 1.5fr;
+  grid-template-columns: 1.5fr 1fr 2fr 0.5fr 2fr;
   gap: var(--space-5);
   margin-bottom: var(--space-6);
   align-items: start;
@@ -1533,6 +1561,10 @@ select {
 .footer-brand .logo img {
   height: 24px;
   filter: brightness(0.25) invert(1) !important;
+}
+
+.footer-brand .logo .footer-logo-alt {
+  display: none;
 }
 
 .footer-brand p {
@@ -1606,10 +1638,27 @@ select {
   margin-bottom: var(--space-4);
 }
 
+.footer-contact-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-2);
+  align-items: start;
+  min-width: 0;
+}
+
+.footer-contact-address {
+  min-width: 0;
+  max-width: 9em;
+}
+
+.footer-contact-details {
+  min-width: 0;
+}
+
 .footer-contact p {
   color: var(--ptx-white);
   font-size: var(--text-body-sm);
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-1);
   line-height: 1.8;
 }
 
@@ -1623,13 +1672,14 @@ select {
 
 /* Footer Bottom */
 .footer-bottom {
+  width: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding-top: var(--space-5);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: var(--space-4);
+  gap: var(--space-1);
 }
 
 .footer-legal {
@@ -2020,6 +2070,10 @@ select {
     grid-template-columns: 1fr;
   }
 
+  .footer-contact-grid {
+    grid-template-columns: 1fr;
+  }
+
   .footer-bottom {
     flex-direction: column;
     text-align: center;
@@ -2052,6 +2106,16 @@ select {
 
   .col {
     padding: 0;
+  }
+}
+
+/* PC screens: cap page width so layout looks the same on every monitor (laptop, 2K, etc.) */
+@media (min-width: 1024px) {
+  body {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
   }
 }
 
@@ -2604,8 +2668,8 @@ select {
 
 .at-a-glance th {
   width: 35%;
-  background: #193673 !important;
-  color: #ffffff !important;
+  background: var(--ptx-blue-700) !important;
+  color: var(--ptx-white) !important;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 600;
@@ -2705,4 +2769,303 @@ select {
   .inline-cta-section .btn {
     text-align: center;
   }
+}
+
+/* ==========================================================================
+   SINGLE THEME (alt as default) – Hero electric blue, styles_alt banner sizing
+   ========================================================================== */
+
+:root {
+  --hero-min-height: 340px;
+}
+
+/* Hero – theme colors from :root (--ptx-blue-400, --ptx-on-dark, --ptx-on-dark-muted) */
+.hero {
+  background: var(--ptx-blue-400);
+  color: var(--ptx-on-dark);
+  min-height: var(--hero-min-height);
+}
+
+.hero::before {
+  background: var(--ptx-blue-400);
+}
+
+.hero h1 {
+  color: var(--ptx-on-dark);
+}
+
+.hero p {
+  color: var(--ptx-on-dark-muted);
+}
+
+/* Hero banner layout – default image sizes and divisions.
+   These apply to all pages with .hero-with-banner.
+   To override per page, set custom properties on the <section> in HTML, e.g.:
+   <section class="hero hero-with-banner" style="--hero-banner-width: 45%; --hero-banner-gap: 3%; --hero-min-height: 380px;">
+*/
+.hero-with-banner {
+  --hero-banner-width: 50%;
+  --hero-min-height: 340px;
+  min-height: var(--hero-min-height);
+}
+
+.hero-compact.hero-with-banner {
+  --hero-min-height: 300px;
+}
+
+.hero-with-banner .container {
+  padding-right: 40%;
+}
+
+.hero-with-banner .hero-content {
+  grid-template-columns: 1fr;
+  max-width: none;
+  padding-right: 0;
+}
+
+.hero-with-banner .hero-content > div {
+  width: 100%;
+}
+
+/* Gradient overlay to blend banner image with hero (uses --ptx-blue-400) */
+.hero-banner-image::before {
+  background:
+    linear-gradient(to right,
+      transparent 0%,
+      transparent 5%,
+      color-mix(in srgb, var(--ptx-blue-400) 92%, transparent) 5%,
+      color-mix(in srgb, var(--ptx-blue-400) 92%, transparent) 15%,
+      transparent 15%,
+      transparent 30%,
+      color-mix(in srgb, var(--ptx-blue-400) 15%, transparent) 30%,
+      color-mix(in srgb, var(--ptx-blue-400) 15%, transparent) 40%,
+      transparent 40%,
+      transparent 100%);
+}
+
+/* Footer – default logo: alt (footer_logo) */
+.footer-brand .footer-logo-og {
+  display: none !important;
+}
+
+.footer-brand .footer-logo-alt {
+  display: block !important;
+  height: 48px !important;
+  max-height: none !important;
+  width: auto !important;
+  min-height: 48px !important;
+}
+
+.footer-brand .logo {
+  max-height: none;
+  align-items: flex-start;
+}
+
+/* Card icons – industry_icons, 40px */
+.card-industry .card-icon,
+.card-industry .card-icon img {
+  color: var(--ptx-slate-700);
+}
+
+.card-industry .card-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.section-header.section-header-industries h2 {
+  text-transform: none;
+  font-variant: normal;
+}
+
+.card-industry > a {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: var(--space-2) var(--space-3);
+  text-align: left;
+}
+
+.card-industry .card-icon {
+  grid-column: 1;
+  grid-row: 1;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0;
+  margin-right: 0;
+  color: var(--ptx-slate-700);
+  align-self: center;
+}
+
+.card-industry h2,
+.card-industry h3,
+.card-industry h4 {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  color: var(--ptx-slate-700);
+  margin-bottom: 0;
+  font-size: var(--text-h4);
+}
+
+.card-industry p {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+.card-industry .card-list,
+.card-industry ul.card-list {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  margin: 0 0 var(--space-2);
+  padding-left: var(--space-4);
+}
+
+.card-industry .card-link {
+  grid-column: 1 / -1;
+  grid-row: 4;
+}
+
+.card-grid-4 .card-industry .card-icon,
+.section-white .card-industry .card-icon {
+  color: var(--ptx-slate-700);
+  width: 40px;
+  height: 40px;
+}
+
+.card-grid-4 .card-industry h2,
+.card-grid-4 .card-industry h4,
+.section-white .card-industry h2,
+.section-white .card-industry h4 {
+  color: var(--ptx-slate-700);
+  font-size: var(--text-h4);
+}
+
+/* Stats – dark block */
+.section-white .stats-row {
+  background: var(--ptx-blue-400);
+  color: var(--ptx-on-dark);
+  padding: var(--space-5) var(--space-6);
+  border-bottom: none;
+  border-radius: 4px;
+  gap: var(--space-4);
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.section-white .stat-item .number {
+  color: var(--ptx-on-dark);
+  font-size: 24px;
+}
+
+.section-white .stat-item .label {
+  color: var(--ptx-on-dark-muted);
+  font-size: var(--text-body-sm);
+}
+
+/* CTA band – theme --ptx-blue-700 */
+.cta-band {
+  background: var(--ptx-navy-700);
+  color: var(--ptx-on-dark);
+}
+
+.cta-band::after {
+  opacity: 0.12;
+}
+
+.cta-band h2,
+.cta-band h3 {
+  color: var(--ptx-on-dark);
+}
+
+.cta-band p {
+  color: var(--ptx-on-dark-muted);
+}
+
+.cta-band .btn-white:hover {
+  background: var(--ptx-on-dark);
+  color: var(--ptx-navy-700);
+  border-color: var(--ptx-on-dark);
+}
+
+/* Compliance strip (certificates band) – same spacing as cta-band */
+.compliance-strip {
+  background: var(--ptx-navy-800);
+  padding: var(--space-4) 0;
+}
+
+.compliance-strip .btn-outline,
+.compliance-strip .text-center.mt-6 .btn {
+  color: var(--ptx-on-dark);
+  border-color: var(--ptx-on-dark);
+}
+
+.compliance-strip .btn-outline:hover,
+.compliance-strip .text-center.mt-6 .btn:hover {
+  background: var(--ptx-on-dark);
+  color: var(--ptx-navy-800);
+  border-color: var(--ptx-on-dark);
+}
+
+/* Nav/links – primary blue from theme */
+.site-nav a:hover,
+.site-nav a[aria-current="page"],
+.nav-item > a:hover,
+.nav-item > a[aria-current="page"] {
+  color: var(--ptx-blue-400);
+}
+
+/* Footer – theme borders and text */
+.site-footer .footer-bottom {
+  border-top: 1px solid var(--ptx-slate-600);
+}
+
+.footer-certs {
+  font-size: var(--text-body-sm);
+  color: var(--ptx-slate-400);
+}
+
+.footer-brand p {
+  font-size: var(--text-body-xs);
+}
+
+/* Section white tables (About etc.) */
+.section.section-white table td:first-child,
+.section.section-white table td:first-child strong {
+  color: var(--ptx-slate-700);
+}
+
+.section.section-white table td:last-child {
+  color: var(--ptx-slate-600);
+}
+
+.section.section-white table td {
+  border-bottom: 1px solid var(--ptx-slate-200);
+}
+
+.section.section-light h3 {
+  color: var(--ptx-slate-700);
+}
+
+.section.section-light .grid-2 ul,
+.section.section-light .grid-2 li {
+  color: var(--ptx-slate-600);
+}
+
+.section-navy .section-header h2,
+.section-navy h2 {
+  color: var(--ptx-on-dark);
+}
+
+.section-navy p,
+.section-navy .card-stat .stat-label {
+  color: var(--ptx-on-dark-muted);
+}
+
+/* ==========================================================================
+   Quality page only: certification/QMS card spacing + CTA band gray
+   ========================================================================== */
+.page-quality .section-white .card-industry h3,
+.page-quality .section-light .card-industry h3 {
+  margin-bottom: var(--space-3);
 }

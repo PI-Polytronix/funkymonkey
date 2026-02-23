@@ -9,8 +9,8 @@
  <link rel="icon" type="image/svg+xml" sizes="32x32" href="/assets/favicons/favicon-32.svg">
  <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body>
- <div id="site-header"></div>
+<body class="page-quality">
+ <header id="site-header" class="site-header"></header>
 
  <div class="breadcrumbs-bar">
  <div class="container">
@@ -28,7 +28,7 @@
  <div class="hero-banner-image" style="background-image: url('/assets/images/certifications_banner.jpg');" role="img" aria-label="Polytronix certifications banner, showing an cns machine creating a part."></div>
  <div class="container">
  <div class="hero-content">
- <h1>Quality Programs &amp; Certifications</h1>
+ <h1>Quality &amp Compliance</h1>
  <p>Polytronix is dedicated to providing the highest quality products, on time, while meeting or exceeding customer requirements.  This is accomplished through compliance with AS9100 and ISO9001 requirements, active top management support, and the continual improvement of our Quality Management System.</p>
  </div>
  </div>
@@ -38,8 +38,9 @@
  <div class="container">
  <div class="section-header">
  <h2>Site Certifications</h2>
+ <style>  .section-white .section-header {margin-bottom: 1rem;}</style>
  </div>
- <div class="card-grid card-grid-2">
+ <div class="card-grid card-grid-3">
 
  <article class="card card-industry">
  <h3>Richardson, TX</h3>
@@ -77,6 +78,7 @@
  <div class="container">
  <div class="section-header">
  <h2>QMS Programs</h2>
+ <style>  .section-light .section-header {margin-bottom: 1rem;}</style>
  </div>
  <div class="card-grid card-grid-2">
  <article class="card card-industry">
@@ -90,6 +92,13 @@
  </article>
  <article class="card card-industry">
  <h3>QMS Compliance</h3>
+ <style>
+    /* Only the QMS Compliance card: two-column list */
+    .section-light .card-grid-2 .card-industry:last-child ul {
+      column-count: 2;
+      column-gap: 1.5rem;
+    }
+  </style>
  <ul>
  <li>Internal Quality Program</li>
  <li>Product Reliability</li>
@@ -118,8 +127,8 @@
  </section>
 
   <!-- BLOCK 4: CERTIFICATIONS -->
- <div id="compliance-strip"></div>
- </main>
+ <!-- <div id="compliance-strip"></div> -->
+ <!-- </main> -->
 
 
  <!-- FOOTER -->

@@ -23,7 +23,7 @@ class NoCacheHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         # Custom logging format
         print(f"[{self.log_date_time_string()}] {format % args}")
 
-def run_server(port=5000, host='0.0.0.0'):
+def run_server(port=8000, host='0.0.0.0'):
     """Run the HTTP server"""
     # Change to the directory containing the HTML files
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
