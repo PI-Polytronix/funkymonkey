@@ -1008,6 +1008,21 @@ p {
   margin-bottom: 0;
 }
 
+/* Home industry cards: sub-industry bullet lists */
+.card-subindustries {
+  list-style: disc;
+  padding-left: var(--space-4);
+  margin: var(--space-3) 0 0 0;
+  color: var(--ptx-slate-600);
+  font-size: 0.875rem;
+  columns: 2;
+  column-gap: var(--space-4);
+}
+
+.card-subindustries li {
+  padding: 0.100em 0;
+}
+
 /* Industry Card (Icon-led) */
 .card-industry {
   text-align: left;
@@ -3081,6 +3096,33 @@ select {
 }
 
 .card-industry .card-link {
+  grid-column: 1 / -1;
+  grid-row: 4;
+}
+
+/* Home industry cards: icon left of title (side by side); only bullets in 2 columns */
+.card-industry:has(.card-subindustries) > a {
+  grid-template-columns: auto 1fr;
+}
+.card-industry:has(.card-subindustries) .card-icon {
+  grid-column: 1;
+  grid-row: 1;
+}
+.card-industry:has(.card-subindustries) h2,
+.card-industry:has(.card-subindustries) h3,
+.card-industry:has(.card-subindustries) h4 {
+  grid-column: 2;
+  grid-row: 1;
+}
+.card-industry:has(.card-subindustries) p {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+.card-industry:has(.card-subindustries) .card-subindustries {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+.card-industry:has(.card-subindustries) .card-link {
   grid-column: 1 / -1;
   grid-row: 4;
 }
