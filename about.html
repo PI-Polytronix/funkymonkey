@@ -28,7 +28,7 @@
  </script>
 </head>
 
-<body>
+<body class="page-about">
   <!-- HEADER -->
  <header id="site-header" class="site-header"></header>
 
@@ -45,34 +45,33 @@
  </div>
 
  <main>
- <!-- HERO -->
- <section class="hero hero-compact hero-with-banner">
+ <!-- HERO: full-bleed image, blue overlay, centered title only -->
+ <section class="hero hero-compact hero-with-banner hero-about">
  <div class="hero-banner-image" role="img" style="background-image: url('/assets/images/about_banner.jpg');" aria-label="About page banner, showing a close-up of a highly engineered component."></div>
  <div class="container">
  <div class="hero-content">
- <!-- EDITABLE: Headline -->
- <h1>Highly Engineered Manufacturing and Sub-Assembly Since 1981</h1>
- 
- <!-- EDITABLE: Tagline -->
- <p>Polytronix builds highly engineered components for the aerospace & defense, medical, and industrial industries. Design, machining, assembly, and testing under one roof.</p>
+ <h1>Highly Engineered Manufacturing since 1981</h1>
  </div>
  </div>
  </section>
 
  <!-- COMPANY OVERVIEW -->
- <section class="section section-white">
+ <section class="section section-white section-history">
  <div class="container">
  <h2>History</h2>
- <p>Since 1981, Polytronix has been at the forefront of manufacturing and sub-assembly for highly engineered components and sub-assemblies. When displays and electronic assemblies fail, programs stop. For us, failure is not an option. We build for the most demanding envrionments where quality, reliability, and technical accuracy matter.</p>
+ <div class="section-history-body">
+ <p class="section-history-intro">From concept through test, Polytronix provides design, precision machining, assembly, and validation for mission-critical components across aerospace &amp; Defense, medical, and industrial applications. Since 1981, we have been at the forefront of manufacturing and sub-assembly for highly engineered components and sub-assemblies. When displays and electronic assemblies fail, programs stop. For us, failure is not an option. We build for the most demanding environments where quality, reliability, and technical accuracy matter.</p>
+ <p class="section-history-intro">Polytronix, Inc., headquartered in Richardson, Texas, has been an innovator in the design, manufacturing, and marketing of liquid crystal displays for over 40 years. Our displays provide visual output across medical, aviation, aerospace, marine, automotive, industrial controls, and Defense applications. In aerospace and military markets—where quality and reliability are non-negotiable—we are a recognized leader in Dichroic, Heilmeier, and PWTN technology, with IPC-A-610 Certified IPC Trainers and J-STD-001 qualified specialists supporting every electronic assembly. We serve the largest aerospace companies worldwide with custom instrument display panels built for tomorrow&rsquo;s requirements.</p>
+ </div>
  </div>
  </section>
 
- <section class="section section-white">
+ <section class="section section-light section-at-a-glance">
  <div class="container">
- <div class="grid grid-2 gap-6">
+ <div class="grid grid-at-a-glance gap-6">
  <div>
- <h2>At a Glance</h2>
- <table>
+ <h3>At a Glance</h3>
+ <table class="table-at-a-glance">
  <tbody>
  <tr>
  <td><strong>Founded</strong></td>
@@ -83,7 +82,7 @@
  <td>Richardson, Texas</td>
  </tr>
  <tr>
- <td><strong>Core Strenghths</strong></td>
+ <td><strong>Core Strengths</strong></td>
  <td>Manufacturing and Sub-Assembly for Highly Engineered Components</td>
  </tr>
  <tr>
@@ -106,16 +105,52 @@
  </table>
  </div>
  <div>
- <h2>Example Applications</h2>
- <ul>
+ <h3>Example Applications</h3>
+ <ul class="list-example-apps">
  <li>Aviation cockpit displays and panels</li>
- <li>Satellite & space sub-assemblies</li>
+ <li>Satellite &amp; space sub-assemblies</li>
  <li>Patient monitoring and surgical equipment</li>
  <li>Industrial robotics and factory equipment</li>
  <li>HVAC controllers and interfaces</li>
  </ul>
+ </div>
+ </div>
+ </div>
+ </section>
 
+ <!-- GLOBAL FOOTPRINT -->
+ <section class="section section-white section-global-footprint">
+ <div class="container">
+ <h2>Global Footprint</h2>
+ <div class="section-global-footprint-body">
+ <div class="card-grid card-grid-2 mt-5">
+ <article class="card card-industry card-large card-footprint-usa">
+ <h2>United States</h2>
+ <ul class="card-list card-list-bullets">
+ <li>Engineering and design</li>
+ <li>Prototyping and NPI</li>
+ <li>Low-to-mid volume production</li>
+ <li>ITAR-controlled programs</li>
+ <li>FAA 145 and EASA Part 145 repair station</li>
+ </ul>
+ <div class="card-footprint-icon"><img src="/assets/images/made_in_usa.png" alt="Made in USA" loading="lazy"></div>
+ </article>
+ <article class="card card-industry card-large card-footprint-international">
+ <h2>International</h2>
+ <ul class="card-list card-list-bullets">
+ <li>High-volume production</li>
+ <li>Cost-efficient scaling</li>
+ <li>Supply chain management</li>
+ <li>Qualified manufacturing</li>
+ <li>End-of-Life obsolescence management</li>
+ </ul>
+ <div class="card-footprint-icon card-footprint-icon-globe">
+ <img src="/assets/favicons/industry_icons/world.svg" alt="" width="62" height="62" loading="lazy">
+ </div>
+ </article>
+ </div>
  <iframe
+ class="global-footprint-map"
  src="https://www.google.com/maps?q=Polytronix+HQ+701+N+Plano+Rd,+Richardson,+TX+75081|888+Alpha+Dr,+Richardson,+TX+75081|11005+Ralston+Rd,+Arvada,+CO+80004&ll=32.95864,-96.70315&z=14&output=embed"
  width="100%"
  height="320"
@@ -124,36 +159,6 @@
  referrerpolicy="no-referrer-when-downgrade"
  title="Map of Polytronix U.S. facilities">
  </iframe>
- </div>
- </div>
- </div>
- </section>
-
- <!-- GLOBAL FOOTPRINT -->
- <section class="section section-light">
- <div class="container">
- <h2>Global Footprint</h2>
- <div class="grid grid-2 gap-6">
- <div>
- <h3>United States</h3>
- <ul>
- <li>Engineering and design</li>
- <li>Prototyping and NPI</li>
- <li>Low-to-mid volume production</li>
- <li>ITAR-controlled programs</li>
- <li>FAA 145 and EASA Part 145 repair station</li>
- </ul>
- </div>
- <div>
- <h3>International</h3>
- <ul>
- <li>High-volume production</li>
- <li>Cost-efficient scaling</li>
- <li>Supply chain management</li>
- <li>Qualified manufacturing</li>
- <li>End-of-Life obsolescence management</li>
- </ul>
- </div>
  </div>
  </div>
  </section>

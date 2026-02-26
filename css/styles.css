@@ -126,11 +126,14 @@
   --space-9: 96px;
   --space-10: 128px;
 
+  /* Card badge – change this to resize the Made in USA logo on capability cards */
+  --made-in-usa-size: 62px;
+
   /* Layout */
   --container-sm: 720px;
   --container-md: 960px;
-  --container-lg: 1200px;
-  --container-xl: 1400px;
+  --container-lg: 1380px;
+  --container-xl: 1500px;
   --gutter: 48px;
   --gutter-tablet: 32px;
   --gutter-mobile: 16px;
@@ -406,11 +409,6 @@ p {
   background: var(--ptx-white);
   border-bottom: var(--border-light);
   height: 72px;
-}
-
-/* Header uses full width with gutter so logo sits left, CTAs right */
-.site-header .container {
-  max-width: none;
 }
 
 .header-inner {
@@ -860,7 +858,7 @@ p {
   }
 
   .hero-with-banner .container {
-    padding-right: calc(var(--hero-banner-width) + var(--space-3));
+    padding-right: calc(var(--hero-banner-width) + var(--space-5));
   }
 }
 
@@ -876,6 +874,68 @@ p {
 
   .hero-with-banner .container {
     padding-right: var(--gutter-mobile);
+  }
+}
+
+/* About page hero: full-bleed image, blue overlay (60% opacity), centered title only */
+.hero-about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-about .hero-banner-image {
+  inset: 0;
+  width: 100%;
+  right: auto;
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-about .hero-banner-image::before {
+  display: none;
+}
+
+.hero-about::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--ptx-blue-400);
+  opacity: 0.3;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-about .container {
+  position: relative;
+  z-index: 3;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero-about .hero-content {
+  text-align: center;
+  max-width: 90%;
+}
+
+.hero-about h1 {
+  margin-bottom: 0;
+  color: var(--ptx-on-dark);
+}
+
+@media (max-width: 767px) {
+  .hero-about .hero-banner-image {
+    display: block;
+  }
+
+  .hero-about {
+    min-height: 280px;
   }
 }
 
@@ -917,6 +977,7 @@ p {
 
 /* Base Card */
 .card {
+  position: relative;
   background: var(--ptx-white);
   border: var(--border-light);
   border-radius: var(--radius-md);
@@ -976,6 +1037,20 @@ p {
 
 .card-industry:hover .card-link::after {
   transform: translateX(4px);
+}
+
+/* Made in USA logo on capability cards (industry subpages) – size controlled by --made-in-usa-size */
+.card-made-in-usa {
+  position: absolute;
+  bottom: var(--space-2);
+  right: var(--space-2);
+  width: var(--made-in-usa-size);
+  z-index: 1;
+}
+.card-made-in-usa img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Capability Card (Image-led) */
@@ -1560,11 +1635,12 @@ select {
 
 .footer-brand .logo img {
   height: 24px;
-  filter: brightness(0.25) invert(1) !important;
+  
 }
 
 .footer-brand .logo .footer-logo-alt {
-  display: none;
+  display: block !important;
+  filter: none !important;
 }
 
 .footer-brand p {
@@ -1588,6 +1664,17 @@ select {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: var(--space-4);
+}
+
+.footer-nav h4 a,
+.footer-contact h4 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-nav h4 a:hover,
+.footer-contact h4 a:hover {
+  text-decoration: underline;
 }
 
 .footer-nav ul {
@@ -2562,6 +2649,67 @@ select {
   transform: translateY(-4px);
 }
 
+/* Industries page: image-background cards */
+.industry-section-title {
+  margin-bottom: var(--space-3);
+}
+
+.industry-section-desc {
+  margin-bottom: var(--space-5);
+  color: var(--ptx-slate-600);
+  max-width: 65ch;
+}
+
+.card-industry-bg {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background-color: var(--ptx-slate-200);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border-light);
+}
+
+.card-industry-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--ptx-blue-400);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.card-industry-bg-title {
+  position: relative;
+  z-index: 1;
+  color: #ffffff !important;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  padding: var(--space-4);
+  font-size: var(--text-h4);
+}
+
+.industry-section-explore {
+  margin-top: var(--space-5);
+  margin-bottom: 0;
+}
+
+.industry-section-explore a {
+  color: var(--ptx-blue-500);
+  font-weight: var(--weight-bold);
+  font-size: 1.25rem;
+}
+
+/* Industries: less space between trust-indicators (stats) and first section title */
+#trust-indicators + .section.section-white {
+  padding-top: var(--space-5);
+}
+
 .card-list {
   list-style: none;
   padding: 0;
@@ -2813,14 +2961,20 @@ select {
   --hero-min-height: 300px;
 }
 
+/* Reserve space for banner so text never overlaps image (matches --hero-banner-width + gap) */
 .hero-with-banner .container {
-  padding-right: 40%;
+  padding-right: calc(var(--hero-banner-width) + var(--space-5));
 }
 
 .hero-with-banner .hero-content {
   grid-template-columns: 1fr;
   max-width: none;
   padding-right: 0;
+}
+
+/* About hero: override banner layout so title is centered on full screen */
+.hero-about.hero-with-banner .container {
+  padding-right: var(--gutter);
 }
 
 .hero-with-banner .hero-content > div {
@@ -2850,10 +3004,10 @@ select {
 
 .footer-brand .footer-logo-alt {
   display: block !important;
-  height: 48px !important;
+  height: 88px !important;
   max-height: none !important;
   width: auto !important;
-  min-height: 48px !important;
+  min-height: 88px !important;
 }
 
 .footer-brand .logo {
@@ -3041,6 +3195,164 @@ select {
 
 .section.section-white table td {
   border-bottom: 1px solid var(--ptx-slate-200);
+}
+
+/* About page: History section – intro paragraph width and line spacing, container centered */
+.page-about .section-history .container,
+.page-about .section-global-footprint .container {
+  width: 100%;
+  max-width: var(--container-lg);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  box-sizing: border-box;
+}
+
+.section-history h2 {
+  text-align: center;
+}
+
+.section-history .section-history-body {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  column-count: 2;
+  column-gap: var(--space-6);
+  column-rule: 1px solid var(--ptx-slate-200);
+}
+
+.section-history .section-history-intro {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  line-height: 1.75;
+  text-align: justify;
+  break-inside: avoid;
+}
+
+@media (max-width: 767px) {
+  .section-history .section-history-body {
+    column-count: 1;
+  }
+}
+
+.section-history h3 {
+  color: var(--ptx-slate-700);
+  font-size: var(--text-h4);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+}
+
+.section-history h3:first-of-type {
+  margin-top: var(--space-5);
+}
+
+/* About page: At a glance + Example Applications – 65% table, 35% list, distinct section (light bg) */
+.grid-at-a-glance {
+  display: grid;
+  grid-template-columns: 65% 1fr;
+  gap: var(--space-6);
+}
+
+@media (max-width: 768px) {
+  .grid-at-a-glance {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-at-a-glance h3 {
+  color: var(--ptx-slate-700);
+  font-size: var(--text-h4);
+  margin-bottom: var(--space-4);
+}
+
+.section-at-a-glance .list-example-apps {
+  margin: 0;
+  padding-left: var(--space-4);
+  color: var(--ptx-slate-600);
+}
+
+/* About page: At a glance table – labels one per line, values Slate Grey, dividers Cloud Grey */
+.section-at-a-glance .table-at-a-glance {
+  width: 100%;
+}
+.section-at-a-glance .table-at-a-glance td:first-child {
+  width: 38%;
+  min-width: 10em;
+  white-space: nowrap;
+  padding-right: var(--space-4);
+  color: var(--ptx-slate-700);
+}
+.section-at-a-glance .table-at-a-glance td:last-child {
+  color: #5C6778;
+}
+.section-at-a-glance .table-at-a-glance td {
+  border-bottom: 1px solid #C0CAD4;
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+  vertical-align: top;
+}
+.section-at-a-glance .table-at-a-glance tr:last-child td {
+  border-bottom: none;
+}
+
+/* About page: Global Footprint – map below text */
+/* Global Footprint: same as History – centered title, full-width body so content is centered */
+.section-global-footprint h2 {
+  text-align: center;
+}
+
+.section-global-footprint .section-global-footprint-body {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Global Footprint cards: bullets, space between title and list, bottom-right icons */
+.section-global-footprint .card-industry.card-large h2 {
+  margin-bottom: var(--space-4);
+}
+
+.section-global-footprint .card-list-bullets {
+  list-style: disc;
+  padding-left: var(--space-5);
+}
+
+.section-global-footprint .card-list-bullets li {
+  padding-left: var(--space-2);
+}
+
+.section-global-footprint .card-footprint-usa,
+.section-global-footprint .card-footprint-international {
+  position: relative;
+}
+
+.section-global-footprint .card-footprint-icon {
+  position: absolute;
+  bottom: var(--space-1);
+  right: var(--space-3);
+  width: var(--made-in-usa-size);
+  height: var(--made-in-usa-size);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-global-footprint .card-footprint-icon img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section-global-footprint .global-footprint-map {
+  margin-top: var(--space-6);
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .section.section-light h3 {
