@@ -2666,13 +2666,14 @@ select {
   overflow: hidden;
   aspect-ratio: 16 / 9;
   background-color: var(--ptx-slate-200);
-  background-size: cover;
-  background-position: center;
+  background-size: cover !important;
+  background-position: center !important;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   border: var(--border-light);
+  min-width: 0;
 }
 
 .card-industry-bg-overlay {
@@ -2692,6 +2693,10 @@ select {
   margin: 0;
   padding: var(--space-4);
   font-size: var(--text-h4);
+  line-height: 1.2;
+  word-wrap: break-word;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .industry-section-explore {
