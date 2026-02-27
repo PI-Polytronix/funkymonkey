@@ -3448,6 +3448,12 @@ select {
   color: var(--ptx-slate-700);
 }
 
+/* Keep industries image-card title bars white in both white/light sections */
+.section.section-light .card-industry-bg .card-industry-bg-title,
+.section.section-white .card-industry-bg .card-industry-bg-title {
+  color: #ffffff;
+}
+
 .section.section-light .grid-2 ul,
 .section.section-light .grid-2 li {
   color: var(--ptx-slate-600);
