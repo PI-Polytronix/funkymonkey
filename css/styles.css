@@ -868,11 +868,14 @@ p {
     display: flex;
     flex-direction: column;
     min-height: auto;
+    gap: var(--space-4);
   }
 
   .hero.hero-with-banner .container {
     order: 1;
+    padding-left: var(--gutter-mobile);
     padding-right: var(--gutter-mobile);
+    padding-bottom: 0;
   }
 
   .hero.hero-with-banner .hero-banner-image {
@@ -880,6 +883,7 @@ p {
     order: 2;
     width: 100%;
     height: 220px;
+    margin-top: 0;
     display: block;
     background-size: cover;
     background-position: center;
@@ -887,6 +891,7 @@ p {
 
   .hero.hero-with-banner .hero-content {
     text-align: center;
+    margin-bottom: 0;
   }
 
   .hero.hero-with-banner h1,
@@ -1668,12 +1673,12 @@ select {
 }
 
 .footer-brand {
-  text-align: center;
+  text-align: left;
 }
 
 .footer-brand .logo {
   margin-bottom: var(--space-4);
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .footer-brand .logo img {
@@ -1808,7 +1813,7 @@ select {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: var(--space-1);
 }
 
@@ -1830,6 +1835,9 @@ select {
   display: flex;
   gap: var(--space-4);
   align-items: center;
+  flex: 1;
+  min-width: 0;
+  justify-content: flex-end;
 }
 
 .footer-certs img {
@@ -2206,7 +2214,9 @@ select {
 
   .footer-bottom {
     flex-direction: column;
+    align-items: center;
     text-align: center;
+    gap: var(--space-2);
   }
 
   .site-footer,
@@ -2216,6 +2226,38 @@ select {
   .footer-nav h4,
   .footer-contact h4 {
     text-align: center;
+  }
+
+  /* Keep brand block left-aligned except on very small screens */
+  .footer-brand,
+  .footer-brand p {
+    text-align: left;
+  }
+
+  .footer-brand .logo {
+    justify-content: flex-start;
+  }
+
+  .footer-brand p {
+    text-align: center;
+  }
+
+  /* Footer contact centered on small screens */
+  .footer-contact,
+  .footer-contact h4,
+  .footer-contact p,
+  .footer-contact a {
+    text-align: center;
+  }
+
+  .footer-contact-address {
+    max-width: none;
+  }
+
+  /* Footer certifications on separate line below legal */
+  .footer-certs {
+    width: 100%;
+    justify-content: center;
   }
 
   /* Mobile Buttons */
@@ -2245,6 +2287,18 @@ select {
 
   .col {
     padding: 0;
+  }
+}
+
+/* Very small screens: center only footer brand/logo + description */
+@media (max-width: 480px) {
+  .footer-brand,
+  .footer-brand p {
+    text-align: center;
+  }
+
+  .footer-brand .logo {
+    justify-content: center;
   }
 }
 
@@ -2787,6 +2841,7 @@ select {
 .industry-section-explore {
   margin-top: var(--space-5);
   margin-bottom: 0;
+  text-align: center;
 }
 
 .industry-section-explore a {
@@ -3504,4 +3559,58 @@ select {
 .page-quality .section-white .card-industry h3,
 .page-quality .section-light .card-industry h3 {
   margin-bottom: var(--space-3);
+}
+
+/* Contact page: center hero/content on small screens for visual consistency */
+@media (max-width: 767px) {
+  .page-contact .contact-hero .hero-content,
+  .page-contact .contact-hero h1,
+  .page-contact .contact-hero p {
+    text-align: center;
+  }
+
+  .page-contact .contact-page-grid {
+    text-align: center;
+  }
+
+  .page-contact .contact-direct h2,
+  .page-contact .contact-direct h3,
+  .page-contact .contact-direct p,
+  .page-contact .contact-direct a,
+  .page-contact .contact-form-col h2 {
+    text-align: center;
+  }
+
+  .page-contact .contact-form-col .btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Footer brand description centered on small/tablet screens */
+@media (max-width: 991px) {
+  .site-footer .footer-brand p {
+    text-align: center;
+  }
+}
+
+/* Quality page: center page content on small screens */
+@media (max-width: 767px) {
+  .page-quality .section-header,
+  .page-quality .section-header h2,
+  .page-quality .card-industry,
+  .page-quality .card-industry h3,
+  .page-quality .cta-band,
+  .page-quality .cta-band h2,
+  .page-quality .cta-band p {
+    text-align: center;
+  }
+
+  .page-quality .card-industry ul {
+    display: inline-block;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
