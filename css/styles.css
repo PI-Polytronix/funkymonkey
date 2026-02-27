@@ -3614,3 +3614,36 @@ select {
     margin-right: auto;
   }
 }
+
+/* Global tiny-screen pass: generally center page content */
+@media (max-width: 480px) {
+  main,
+  main .container {
+    text-align: center;
+  }
+
+  main .hero-ctas,
+  main .btn-group {
+    justify-content: center;
+  }
+
+  main ul,
+  main ol {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  main table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Keep form controls readable on very small screens */
+  main form {
+    text-align: left;
+  }
+
+  main form h2 {
+    text-align: center;
+  }
+}
