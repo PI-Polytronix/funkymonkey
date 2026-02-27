@@ -1025,6 +1025,7 @@ p {
   display: block;
 }
 
+.card h2,
 .card h3,
 .card h4 {
   color: var(--ptx-navy-700);
@@ -1033,7 +1034,13 @@ p {
 
 .card p {
   color: var(--ptx-slate-600);
+  margin-top: var(--space-2);
   margin-bottom: 0;
+}
+
+.card ul,
+.card ol {
+  margin-top: var(--space-2);
 }
 
 /* Home industry cards: sub-industry bullet lists */
@@ -1788,6 +1795,7 @@ select {
 
 .footer-contact-details {
   min-width: 0;
+  max-width: 100%;
 }
 
 .footer-contact p {
@@ -1795,10 +1803,16 @@ select {
   font-size: var(--text-body-sm);
   margin-bottom: var(--space-1);
   line-height: 1.8;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .footer-contact a {
   color: var(--ptx-white);
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .footer-contact a:hover {
@@ -2203,63 +2217,6 @@ select {
     flex: 0 0 calc(50% - var(--space-4));
   }
 
-  /* Mobile Footer */
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: var(--space-2);
-  }
-
-  .site-footer,
-  .site-footer p,
-  .site-footer li,
-  .site-footer a,
-  .footer-nav h4,
-  .footer-contact h4 {
-    text-align: center;
-  }
-
-  /* Keep brand block left-aligned except on very small screens */
-  .footer-brand,
-  .footer-brand p {
-    text-align: left;
-  }
-
-  .footer-brand .logo {
-    justify-content: flex-start;
-  }
-
-  .footer-brand p {
-    text-align: center;
-  }
-
-  /* Footer contact centered on small screens */
-  .footer-contact,
-  .footer-contact h4,
-  .footer-contact p,
-  .footer-contact a {
-    text-align: center;
-  }
-
-  .footer-contact-address {
-    max-width: none;
-  }
-
-  /* Footer certifications on separate line below legal */
-  .footer-certs {
-    width: 100%;
-    justify-content: center;
-  }
-
   /* Mobile Buttons */
   .btn-group {
     flex-direction: column;
@@ -2290,15 +2247,111 @@ select {
   }
 }
 
-/* Very small screens: center only footer brand/logo + description */
-@media (max-width: 480px) {
-  .footer-brand,
-  .footer-brand p {
-    text-align: center;
+/* Collapsed nav for compact widths to prevent clipped header links */
+@media (max-width: 1023px) {
+  .nav-toggle-label {
+    display: block;
   }
 
-  .footer-brand .logo {
-    justify-content: center;
+  .site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--ptx-white);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 80px var(--space-5) var(--space-5);
+    transform: translateX(100%);
+    transition: transform var(--transition-slow);
+    z-index: var(--z-header);
+  }
+
+  .nav-toggle:checked ~ .site-nav {
+    transform: translateX(0);
+  }
+
+  .site-nav a {
+    padding: var(--space-4);
+    border-bottom: var(--border-light);
+    font-size: var(--text-body);
+  }
+
+  .site-nav .btn-primary {
+    margin-top: var(--space-5);
+  }
+
+  .nav-item {
+    display: block;
+    width: 100%;
+  }
+
+  .nav-item > a {
+    display: block;
+    width: 100%;
+    padding: var(--space-4);
+    border-bottom: var(--border-light);
+    font-size: var(--text-body);
+    color: var(--ptx-navy-700);
+    font-weight: var(--weight-bold);
+  }
+
+  .nav-item > a.nav-item-toggle {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .nav-item > a.nav-item-toggle::after {
+    display: inline-block;
+    margin-left: 6px;
+    vertical-align: middle;
+    transition: transform 0.2s ease;
+  }
+
+  .nav-item.open > a.nav-item-toggle::after,
+  .nav-item.open > a::after {
+    transform: rotate(180deg);
+  }
+
+  .nav-submenu {
+    position: static;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: none;
+    box-shadow: none;
+    background: var(--ptx-slate-050);
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    transition: max-height 0.3s ease, opacity 0.2s ease;
+  }
+
+  .nav-item.open .nav-submenu {
+    max-height: 240px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-submenu a {
+    padding-left: var(--space-6);
+    border-bottom: var(--border-light);
+  }
+
+  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
   }
 }
 
@@ -3561,23 +3614,234 @@ select {
   margin-bottom: var(--space-3);
 }
 
-/* Contact page: center hero/content on small screens for visual consistency */
-@media (max-width: 767px) {
-  .page-contact .contact-hero .hero-content,
-  .page-contact .contact-hero h1,
-  .page-contact .contact-hero p {
+/* Unified compact mode: non-fullscreen browsers + mobile */
+@media (max-width: 1023px) {
+  /* Hero overflow safety in compact mode */
+  main .hero,
+  main .hero .container,
+  main .hero .hero-content,
+  main .hero .hero-content > * {
+    min-width: 0;
+  }
+
+  main .hero h1,
+  main .hero p,
+  main .hero .why-matters {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
+  }
+
+  /* Compact hero normalization: prevent off-center text caused by reserved banner space */
+  main .hero.hero-with-banner:not(.hero-about) {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    gap: var(--space-4);
+  }
+
+  main .hero.hero-with-banner:not(.hero-about) .container {
+    order: 1;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+    padding-bottom: 0;
+  }
+
+  main .hero.hero-with-banner:not(.hero-about) .hero-banner-image {
+    position: static;
+    order: 2;
+    width: 100%;
+    height: 240px;
+    margin-top: 0;
+    display: block;
+    background-size: cover;
+    background-position: center;
+  }
+
+  main .hero.hero-with-banner:not(.hero-about) .hero-content {
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  main .hero.hero-with-banner:not(.hero-about) .hero-content > div {
+    max-width: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main .hero.hero-with-banner:not(.hero-about) h1,
+  main .hero.hero-with-banner:not(.hero-about) p,
+  main .hero.hero-with-banner:not(.hero-about) .why-matters {
     text-align: center;
   }
 
-  .page-contact .contact-page-grid {
+  main .hero.hero-with-banner:not(.hero-about) p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main .hero.hero-with-banner:not(.hero-about) .hero-ctas {
+    justify-content: center;
+  }
+
+  main .section-header,
+  main .section-header h1,
+  main .section-header h2,
+  main .section-header h3,
+  main .section-header h4,
+  main .section-header p,
+  main .hero-content,
+  main .hero-content h1,
+  main .hero-content p,
+  main .cta-band .container,
+  main .cta-band h2,
+  main .cta-band p {
     text-align: center;
   }
 
-  .page-contact .contact-direct h2,
-  .page-contact .contact-direct h3,
-  .page-contact .contact-direct p,
-  .page-contact .contact-direct a,
-  .page-contact .contact-form-col h2 {
+  main .hero-ctas,
+  main .btn-group {
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  main .hero-ctas .btn,
+  main .btn-group .btn,
+  main .card .btn,
+  main .cta-band .btn {
+    width: 100%;
+    max-width: none;
+  }
+
+  main .card,
+  main .card h2,
+  main .card h3,
+  main .card h4,
+  main .card p,
+  main .card-industry,
+  main .card-industry > a {
+    text-align: center !important;
+  }
+
+  main .card-industry > a {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  /* Card text safety: prevent grid/flex children from overflowing their track */
+  main .card,
+  main .card * {
+    min-width: 0;
+  }
+
+  /* Wrap long tokens/URLs instead of bleeding out of cards */
+  main .card p,
+  main .card li,
+  main .card a,
+  main .card-industry p,
+  main .card-industry li,
+  main .card-industry a {
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
+  }
+
+  main .card-industry .card-icon {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main .card-industry h2,
+  main .card-industry h3,
+  main .card-industry h4 {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+  }
+
+  main .card-industry p {
+    grid-row: 3;
+  }
+
+  main .card-industry .card-list,
+  main .card-industry ul.card-list,
+  main .card-subindustries {
+    grid-row: 4;
+    display: inline-block;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    columns: 1;
+  }
+
+  /* Keep card body copy readable while card headings remain centered */
+  main .card p,
+  main .card-industry p,
+  main .card-industry p {
+    max-width: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  /* Lists/bullets should generally stay left-aligned and use full card width */
+  main .card ul,
+  main .card ol,
+  main .card-industry ul,
+  main .card-industry ol {
+    max-width: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  main .card-subindustries {
+    text-align: left;
+  }
+
+  main .card ul,
+  main .card ol,
+  main .card-industry ul,
+  main .card-industry ol {
+    padding-left: 1.1rem;
+  }
+
+  /* Index industry cards: avoid compressed text blocks in compact mode */
+  main .card-industry:has(.card-subindustries) p,
+  main .card-industry:has(.card-subindustries) .card-subindustries {
+    max-width: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  main .card-industry:has(.card-subindustries) .card-subindustries {
+    display: block;
+    padding-left: 1.1rem;
+  }
+
+  main .card-industry .card-link {
+    justify-content: center;
+  }
+
+  main table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main form,
+  main form p,
+  main form label {
+    text-align: left;
+  }
+
+  main form h2 {
     text-align: center;
   }
 
@@ -3586,64 +3850,95 @@ select {
     margin-left: auto;
     margin-right: auto;
   }
-}
 
-/* Footer brand description centered on small/tablet screens */
-@media (max-width: 991px) {
-  .site-footer .footer-brand p {
-    text-align: center;
-  }
-}
-
-/* Quality page: center page content on small screens */
-@media (max-width: 767px) {
-  .page-quality .section-header,
-  .page-quality .section-header h2,
-  .page-quality .card-industry,
-  .page-quality .card-industry h3,
-  .page-quality .cta-band,
-  .page-quality .cta-band h2,
-  .page-quality .cta-band p {
+  .site-footer,
+  .site-footer p,
+  .site-footer li,
+  .site-footer a,
+  .site-footer h4,
+  .footer-contact h4 {
     text-align: center;
   }
 
-  .page-quality .card-industry ul {
-    display: inline-block;
-    text-align: left;
+  .footer-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .footer-grid > * {
+    width: 100%;
+    max-width: 34rem;
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: center;
+  }
+
+  .footer-contact-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 34rem;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
+    gap: var(--space-3);
+  }
+
+  .footer-brand,
+  .footer-brand p {
+    text-align: center;
+  }
+
+  .footer-brand p {
+    max-width: 56ch;
     margin-left: auto;
     margin-right: auto;
   }
-}
 
-/* Global tiny-screen pass: generally center page content */
-@media (max-width: 480px) {
-  main,
-  main .container {
-    text-align: center;
-  }
-
-  main .hero-ctas,
-  main .btn-group {
+  .footer-brand .logo {
     justify-content: center;
   }
 
-  main ul,
-  main ol {
-    padding-left: 0;
-    list-style-position: inside;
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  main table {
+  .footer-contact-address {
+    width: 100%;
+    max-width: none;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  /* Keep form controls readable on very small screens */
-  main form {
-    text-align: left;
-  }
-
-  main form h2 {
     text-align: center;
+  }
+
+  .footer-contact-details {
+    width: 100%;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-2);
+  }
+
+  .footer-certs {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Mid-width compact: keep index industry bullets denser (2 columns) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  main .card-industry:has(.card-subindustries) .card-subindustries {
+    columns: 2;
+    column-gap: var(--space-4);
   }
 }

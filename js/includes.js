@@ -44,7 +44,7 @@
       if (!submenu || !submenu.classList.contains("nav-submenu")) return;
 
       toggle.addEventListener("click", function (e) {
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 1024) {
           var parent = this.parentElement;
           var alreadyOpen = parent.classList.contains("open");
 
