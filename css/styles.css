@@ -862,18 +862,41 @@ p {
   }
 }
 
-/* Responsive: On mobile, hide the banner image to keep text readable */
+/* Responsive: On mobile, show banner image below centered hero text */
 @media (max-width: 767px) {
-  .hero-banner-image {
-    display: none;
-  }
-
-  .hero-with-banner {
+  .hero.hero-with-banner {
+    display: flex;
+    flex-direction: column;
     min-height: auto;
   }
 
-  .hero-with-banner .container {
+  .hero.hero-with-banner .container {
+    order: 1;
     padding-right: var(--gutter-mobile);
+  }
+
+  .hero.hero-with-banner .hero-banner-image {
+    position: static;
+    order: 2;
+    width: 100%;
+    height: 220px;
+    display: block;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero.hero-with-banner .hero-content {
+    text-align: center;
+  }
+
+  .hero.hero-with-banner h1,
+  .hero.hero-with-banner p,
+  .hero.hero-with-banner .why-matters {
+    text-align: center;
+  }
+
+  .hero.hero-with-banner .hero-ctas {
+    justify-content: center;
   }
 }
 
@@ -1644,8 +1667,13 @@ select {
   align-items: start;
 }
 
+.footer-brand {
+  text-align: center;
+}
+
 .footer-brand .logo {
   margin-bottom: var(--space-4);
+  justify-content: center;
 }
 
 .footer-brand .logo img {
@@ -2181,6 +2209,15 @@ select {
     text-align: center;
   }
 
+  .site-footer,
+  .site-footer p,
+  .site-footer li,
+  .site-footer a,
+  .footer-nav h4,
+  .footer-contact h4 {
+    text-align: center;
+  }
+
   /* Mobile Buttons */
   .btn-group {
     flex-direction: column;
@@ -2685,33 +2722,66 @@ select {
   background-position: center !important;
   background-repeat: no-repeat;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
   border: var(--border-light);
   min-width: 0;
+  transition: filter 0.25s ease;
 }
 
-.card-industry-bg-overlay {
+.card-industry-bg::after {
+  content: "";
   position: absolute;
   inset: 0;
   background: var(--ptx-blue-400);
-  opacity: 0.3;
+  opacity: 0;
   pointer-events: none;
+  transition: opacity 0.25s ease;
 }
 
-.card-industry-bg-title {
+.card-industry-bg:hover::after {
+  opacity: 0.35;
+}
+
+.card-industry-bg-overlay {
+  display: none;
+}
+
+/* Title at bottom with solid blue bar – flush to bottom, short bar, no override from .card h3 */
+.card-industry-bg .card-industry-bg-title {
   position: relative;
   z-index: 1;
-  color: #ffffff !important;
+  margin: 0 !important;
+  margin-top: auto !important; /* push to bottom of flex container */
+  padding: 0.35em var(--space-4); /* short bar height */
+  font-size: 0.875rem; /* smaller text */
+  line-height: 1.15;
   font-weight: 700;
   text-align: center;
-  margin: 0;
-  padding: var(--space-4);
-  font-size: var(--text-h4);
-  line-height: 1.2;
+  color: #ffffff !important;
   word-wrap: break-word;
   max-width: 100%;
   min-width: 0;
+  background: var(--ptx-blue-500);
+  flex-shrink: 0;
+}
+
+/* Architecture card: wrap link so card uses same structure as others */
+.card-industry-bg-wrap {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-industry-bg-wrap:hover .card-industry-bg::after {
+  opacity: 0.35;
+}
+
+/* Prevent .card h3 / .card-industry h3 from affecting industry image-card title bar */
+.card-industry-bg .card-industry-bg-title,
+.card-industry-bg-wrap .card-industry-bg-title {
+  margin-bottom: 0 !important;
 }
 
 .industry-section-explore {
@@ -3032,7 +3102,8 @@ select {
 
 .footer-brand .logo {
   max-height: none;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Card icons – industry_icons, 40px */
@@ -3098,6 +3169,12 @@ select {
 .card-industry .card-link {
   grid-column: 1 / -1;
   grid-row: 4;
+}
+
+.card-industry-capability-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 /* Home industry cards: icon left of title (side by side); only bullets in 2 columns */
