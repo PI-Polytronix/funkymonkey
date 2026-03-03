@@ -107,7 +107,7 @@
  <form enctype="multipart/form-data" method="post" action="https://www.freedback.com/mail.php" accept-charset="UTF-8">
  <input type="hidden" name="acctid" id="acctid" value="7gn9adaux90z7n19">
  <input type="hidden" name="formid" id="formid" value="1280377">
- <input type="hidden" name="required_vars" id="required_vars" value="name,field-55a0d7805c22acb,email,field-inquiry-type">
+ <input type="hidden" name="required_vars" id="required_vars" value="name,field-55a0d7805c22acb,email">
 
  <div class="form-group">
  <label for="name" class="required">Name</label>
@@ -127,16 +127,6 @@
  <div class="form-group">
  <label for="email" class="required">Email Address</label>
  <input type="email" id="email" name="email" required autocomplete="email">
- </div>
-
- <div class="form-group">
- <label for="field-inquiry-type" class="required">Inquiry Type</label>
- <select id="field-inquiry-type" name="field-inquiry-type" required>
- <option value="" selected disabled>Select one</option>
- <option value="Purchasing">Purchasing</option>
- <option value="Program Management">Program Management</option>
- <option value="Engineering">Engineering</option>
- </select>
  </div>
 
  <div class="form-group">
@@ -165,21 +155,6 @@
 
 
 
-<script>
-(function () {
- const params = new URLSearchParams(window.location.search);
- const inquiry = params.get('inquiry');
- const map = {
-  'purchasing': 'Purchasing',
-  'program-management': 'Program Management',
-  'engineering': 'Engineering'
- };
- const select = document.getElementById('field-inquiry-type');
- if (select && map[inquiry]) {
-  select.value = map[inquiry];
- }
-})();
-</script>
 <script defer src="/js/includes.js"></script>
 </body>
 </html>

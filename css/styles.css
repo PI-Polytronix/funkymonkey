@@ -1592,8 +1592,9 @@ select {
 
 .cta-band p {
   color: rgba(255, 255, 255, 0.9);
-  margin: 0 auto var(--space-5);
-  max-width: 600px;
+  margin: 0 0 var(--space-4);
+  max-width: none;
+  width: 100%;
 }
 
 .cta-band .btn-group {
