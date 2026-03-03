@@ -4,12 +4,12 @@
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
  
- <title>Contact | Polytronix | Highly Engineered Components Manufacturing and Sub-Assembly</title>
- <meta name="description" content="Contact Polytronix for high mix to high volume manufacturing and sub-assembly specialized in highly engineered components for the aerospace & defense, medical, and industrial industries.">
+ <title>Contact Polytronix | Quotes and Program Inquiries</title>
+ <meta name="description" content="Contact Polytronix to request a quote, discuss program requirements, or connect with sales and engineering for aerospace, defense, medical and industrial projects.">
  <link rel="canonical" href="https://www.polytronix.com/contact.html">
  
- <meta property="og:title" content="Contact | Polytronix | Aerospace & Industrial Manufacturing">
- <meta property="og:description" content="Contact Polytronix for high mix to high volume manufacturing and sub-assembly specialized in highly engineered components for the aerospace & defense, medical, and industrial industries.">
+ <meta property="og:title" content="Contact Polytronix | Quotes and Program Inquiries">
+ <meta property="og:description" content="Request a quote or discuss program requirements with Polytronix sales and engineering teams.">
  <meta property="og:url" content="https://www.polytronix.com/contact.html">
  <meta property="og:type" content="website">
  
@@ -49,7 +49,7 @@
  <div class="container">
  <div class="hero-content">
  <h1>Contact Us</h1>
- <p>Request a quote, ask a technical question, or discuss your program requirements.</p>
+ <p>Select an inquiry type so your request routes directly to Purchasing, Program Management, or Engineering.</p>
  </div>
  </div>
  </section>
@@ -107,7 +107,7 @@
  <form enctype="multipart/form-data" method="post" action="https://www.freedback.com/mail.php" accept-charset="UTF-8">
  <input type="hidden" name="acctid" id="acctid" value="7gn9adaux90z7n19">
  <input type="hidden" name="formid" id="formid" value="1280377">
- <input type="hidden" name="required_vars" id="required_vars" value="name,field-55a0d7805c22acb,email">
+ <input type="hidden" name="required_vars" id="required_vars" value="name,field-55a0d7805c22acb,email,field-inquiry-type">
 
  <div class="form-group">
  <label for="name" class="required">Name</label>
@@ -130,6 +130,16 @@
  </div>
 
  <div class="form-group">
+ <label for="field-inquiry-type" class="required">Inquiry Type</label>
+ <select id="field-inquiry-type" name="field-inquiry-type" required>
+ <option value="" selected disabled>Select one</option>
+ <option value="Purchasing">Purchasing</option>
+ <option value="Program Management">Program Management</option>
+ <option value="Engineering">Engineering</option>
+ </select>
+ </div>
+
+ <div class="form-group">
  <label for="field-281dfe787e9d17d">Upload Files (max size 2 MB)</label>
  <input type="file" id="field-281dfe787e9d17d" name="field-281dfe787e9d17d">
  </div>
@@ -139,7 +149,7 @@
  <textarea id="field-0d2534591b75db9" name="field-0d2534591b75db9" rows="6"></textarea>
  </div>
 
- <button type="submit" class="btn btn-primary">Submit Form</button>
+ <button type="submit" class="btn btn-primary">Send Inquiry</button>
  </form>
  </div>
  </div>
@@ -155,6 +165,23 @@
 
 
 
+<script>
+(function () {
+ const params = new URLSearchParams(window.location.search);
+ const inquiry = params.get('inquiry');
+ const map = {
+  'purchasing': 'Purchasing',
+  'program-management': 'Program Management',
+  'engineering': 'Engineering'
+ };
+ const select = document.getElementById('field-inquiry-type');
+ if (select && map[inquiry]) {
+  select.value = map[inquiry];
+ }
+})();
+</script>
 <script defer src="/js/includes.js"></script>
 </body>
 </html>
+
+
